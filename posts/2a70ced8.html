@@ -162,6 +162,11 @@
             <span class="date-meta">2019/01/18</span>
         </span>
         
+            <span class="fa-wrap">
+                <i class="fa fa-eye"></i>
+                <span id="busuanzi_value_page_pv"></span>
+            </span>
+        
     
 </div>
 
@@ -190,6 +195,11 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
+        <a href="/posts/6d323993.html" class="pre-post btn btn-default" title="年后第一篇">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">年后第一篇</span>
+        </a>
+    
     
         <a href="/posts/4a17b156.html" class="next-post btn btn-default" title="Hello World">
             <span class="hidden-lg">下一篇</span>
@@ -210,13 +220,13 @@
         new Valine({
             av: AV,
             el: '#vcomments',
-            appId: 'xOKV9J4UeQAtVkvnJC7Kq2Jn-gzGzoHsz',
-            appKey: 'erIpQac4azoCmgfBB7Dl9maa',
-            placeholder: '说点什么吧',
-            notify: false,
-            verify: false,
+            appId: 'c7evBjqIHfXaFfsOBrzT5Dju-gzGzoHsz',
+            appKey: 'p20NBdG7YyuhxIzjKteza9Av',
+            placeholder: '说点什么吧...',
+            notify: true,
+            verify: true,
             avatar: 'mm',
-            meta: 'nick,mail'.split(','),
+            meta: 'nick,mail,link'.split(','),
             pageSize: '10',
             path: window.location.pathname,
             lang: 'zh-CN'.toLowerCase()
@@ -265,6 +275,16 @@
             <div class="col-sm-12">
                 <div class="busuanzi">
     
+        访问量:
+        <strong id="busuanzi_value_site_pv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </strong>
+        &nbsp; | &nbsp;
+        访客数:
+        <strong id="busuanzi_value_site_uv">
+            <i class="fa fa-spinner fa-spin"></i>
+        </strong>
+    
 </div>
 
             </div>
@@ -286,6 +306,8 @@
 
 
 
+
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 <script src="/js/app.js?rev=@@hash"></script>
