@@ -31,7 +31,7 @@
     <!--Title-->
 
 
-<title>年后第一篇 | 之欧舟 | Blog</title>
+<title>nvm安装 | 之欧舟 | Blog</title>
 
 
     <link rel="alternate" href="/atom.xml" title="之欧舟 | Blog" type="application/atom+xml">
@@ -128,9 +128,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="年后第一篇">
+        <h1 id="nvm安装">
             
-	            年后第一篇
+	            nvm安装
             
         </h1>
         <div class="post-meta">
@@ -159,7 +159,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2019/02/19</span>
+            <span class="date-meta">2019/03/04</span>
         </span>
         
             <span class="fa-wrap">
@@ -175,7 +175,33 @@
     </div>
     
     <div class="post-body post-content">
-        
+        <h2 id="首先需要卸载当前node"><a href="#首先需要卸载当前node" class="headerlink" title="首先需要卸载当前node"></a>首先需要卸载当前node</h2><h4 id="1-官网pkg安装包安装的"><a href="#1-官网pkg安装包安装的" class="headerlink" title="1. 官网pkg安装包安装的"></a>1. 官网pkg安装包安装的</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -rf /usr/local/&#123;bin/&#123;node,npm&#125;,lib/node_modules/npm,lib/node,share/man/*/node.*&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="2-homebrew安装的"><a href="#2-homebrew安装的" class="headerlink" title="2. homebrew安装的"></a>2. homebrew安装的</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall node</span><br></pre></td></tr></table></figure>
+<h2 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h2><blockquote>
+<p>node卸载完，基于node的软件和命令行工具也需要重新安装，需要删除/usr/local/bin 下面的相关文件，其实他们都是软连接，正主都在/usr/local/lib/node_modules/目录下.</p>
+</blockquote>
+<h3 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装nvm</h3><blockquote>
+<p>安装方式见<a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">nvm官方文档</a><br></p>
+</blockquote>
+<h4 id="安装报错"><a href="#安装报错" class="headerlink" title="安装报错"></a>安装报错</h4><ol>
+<li>我在安装过程中可能会报错没有.nvm目录（具体报错信息不记得了–），新建即可</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br><span class="line">mkdir .nvm</span><br></pre></td></tr></table></figure>
+<p>再次运行安装命令会把安装文件填充到该目录<br></p>
+<ol start="2">
+<li>提示：<code>command not found: nvm</code><br>复制安装时 提示最底下的三行命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export NVM_DIR=&quot;$HOME/.nvm&quot;</span><br><span class="line">[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; \. &quot;$NVM_DIR/nvm.sh&quot;  # This loads nvm</span><br><span class="line">[ -s &quot;$NVM_DIR/bash_completion&quot; ] &amp;&amp; \. &quot;$NVM_DIR/bash_completion&quot;  # This loads nvm bash_completion</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>然后<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bash_profile #将复制的文本粘贴进来</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>如果使用zsh，在.zshrc中也粘进去</p>
+</blockquote>
+<p>如图：<br><br><img src="https://img-zhiozhou.oss-cn-beijing.aliyuncs.com/bash_nvm?Expires=1551687035&amp;OSSAccessKeyId=TMP.AQFjDVjoNzYchgKtmnDbX1_I9KK1XpWfQv3zL08VyG_ZH5a-pABF65YPUCb2AAAwLAIUVLAtJxNh9As7Rn0vxdrqVbUOn2ECFG6vRghQhg4X1dgJ4CX_-srsTqoX&amp;Signature=9qnif%2FC82sa%2BU%2F0koUvBS5l7xbI%3D" alt="image"><br><br>如果以上设置仍不生效，尝试：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bash_profile</span><br><span class="line">source .bashrc</span><br></pre></td></tr></table></figure></p>
+<p>安装后，使用nvm install <version> 即可安装node环境</version></p>
+<p>再打开新的终端窗口可能会使node失效，设置一个默认node别称即可<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm alias default 8.15.0</span><br></pre></td></tr></table></figure></p>
+<p>好了，愉快的使用nvm来管理node吧<br><br><img src="http://img-zhiozhou.oss-cn-beijing.aliyuncs.com/nvm?Expires=1551687854&amp;OSSAccessKeyId=TMP.AQFjDVjoNzYchgKtmnDbX1_I9KK1XpWfQv3zL08VyG_ZH5a-pABF65YPUCb2AAAwLAIUVLAtJxNh9As7Rn0vxdrqVbUOn2ECFG6vRghQhg4X1dgJ4CX_-srsTqoX&amp;Signature=vwYRXQBmgr3paae4ExyQbvFDCpc%3D" alt></p>
+<p>最后，别忘了将之前全局安装的软件重新安装一遍➡ ➡<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli@3.1.3 @vue/cli-init@3.1.1 babel-eslint@9.0.0 bower@1.8.4 chromedriver@2.41.0 create-react-app@1.5.2 eslint@5.10.0 eslint-config-airbnb@17.1.0 eslint-config-react-app@3.0.5 eslint-config-standard@12.0.0 eslint-plugin-flowtype@2.0.1 eslint-plugin-import@2.14.0 eslint-plugin-jsx-a11y@6.1.1 eslint-plugin-node@8.0.0 eslint-plugin-promise@4.0.1 eslint-plugin-react@7.11.1 eslint-plugin-standard@4.0.0 eslint-plugin-vue@5.0.0 express@4.16.4 express-generator@4.16.0 gulp@3.9.1 gulp-cli@2.0.1 hexo-cli@1.1.0 nrm@1.0.2 parcel-bundler@1.9.7 pm2@3.0.4 react-native-cli@2.0.1 sass@1.13.1 typescript@3.1.1 webpack@4.17.2 wepy-cli@1.7.3</span><br></pre></td></tr></table></figure></p>
+
     </div>
     
     <div class="post-footer">
@@ -192,15 +218,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/posts/5430b040.html" class="pre-post btn btn-default" title="nvm安装">
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">nvm安装</span>
-        </a>
     
-    
-        <a href="/posts/2a70ced8.html" class="next-post btn btn-default" title="Happy New Year">
+        <a href="/posts/6d323993.html" class="next-post btn btn-default" title="年后第一篇">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Happy New Year</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">年后第一篇</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -243,7 +264,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#首先需要卸载当前node"><span class="toc-text">首先需要卸载当前node</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-官网pkg安装包安装的"><span class="toc-text">1. 官网pkg安装包安装的</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-homebrew安装的"><span class="toc-text">2. homebrew安装的</span></a></li></ol></li></ol><li class="toc-item toc-level-2"><a class="toc-link" href="#tips"><span class="toc-text">tips</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装nvm"><span class="toc-text">安装nvm</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装报错"><span class="toc-text">安装报错</span></a></li></ol></li></ol></li>
         
     </div>
 </aside>
