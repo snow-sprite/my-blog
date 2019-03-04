@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2019-03-04T07:55:49.379Z</updated>
+  <updated>2019-03-04T07:59:36.198Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://snow-sprite.github.io/posts/0.html"/>
-    <id>https://snow-sprite.github.io/posts/0.html</id>
-    <published>2019-03-04T07:30:30.263Z</published>
-    <updated>2019-03-04T07:55:49.379Z</updated>
+    <title>nvm的安装</title>
+    <link href="https://snow-sprite.github.io/posts/b2b0af19.html"/>
+    <id>https://snow-sprite.github.io/posts/b2b0af19.html</id>
+    <published>2019-03-04T07:58:55.000Z</published>
+    <updated>2019-03-04T07:59:36.198Z</updated>
     
     <summary type="html">
     
@@ -29,12 +29,14 @@
       
         
         
-          &lt;h2 id=&quot;首先需要卸载当前node&quot;&gt;&lt;a href=&quot;#首先需要卸载当前node&quot; class=&quot;headerlink&quot; title=&quot;首先需要卸载当前node&quot;&gt;&lt;/a&gt;首先需要卸载当前node&lt;/h2&gt;&lt;h4 id=&quot;官网pkg安装包安装的&quot;&gt;&lt;a
+          &lt;h2 id=&quot;卸载当前node&quot;&gt;&lt;a href=&quot;#卸载当前node&quot; class=&quot;headerlink&quot; title=&quot;卸载当前node&quot;&gt;&lt;/a&gt;卸载当前node&lt;/h2&gt;&lt;h4 id=&quot;官网pkg安装包安装的&quot;&gt;&lt;a href=&quot;#官网pkg安装包安装的&quot;
         
       
     
     </summary>
     
+    
+      <category term="tool" scheme="https://snow-sprite.github.io/tags/tool/"/>
     
   </entry>
   
