@@ -181,7 +181,7 @@
     <div class="post-body post-content">
         <h2 id="设计循环队列"><a href="#设计循环队列" class="headerlink" title="设计循环队列"></a>设计循环队列</h2><h3 id="先简单讲下队列"><a href="#先简单讲下队列" class="headerlink" title="先简单讲下队列"></a>先简单讲下队列</h3><p>队列就像我们常见的排队一样，先排队的人先离开，后排队的人后离开（排除所有其他干扰因素），插入（insert）操作也被称为入队(enqueue)，新元素始终被添加在<code>队列的末尾</code>，删除(delete)操作也被称为出队(dequeue)，不论正向还是反方向，你只能操作<code>第一个元素</code></p>
 <h3 id="循环队列"><a href="#循环队列" class="headerlink" title="循环队列"></a>循环队列</h3><p>循环队列是一个线性结构，遵循<code>FIFO</code>（先进先出）原则并且队尾被连接在队首之后形成一个闭合的循环。也被称为“环形缓冲器”。循环队列的好处是可以利用这个队列之前用过的空间，在一个普通队列里，一旦队列满了就不能再往里面插入元素，即使这个队列前面有删除的元素也没法再继续使用，而循环队列则可以高效的利用这部分空间。</p>
-<h3 id="设计一个函数MyCircularQueue至少实现以下效果"><a href="#设计一个函数MyCircularQueue至少实现以下效果" class="headerlink" title="设计一个函数MyCircularQueue至少实现以下效果"></a>设计一个函数MyCircularQueue至少实现以下效果</h3><ul>
+<h3 id="设计一个函数至少实现以下效果"><a href="#设计一个函数至少实现以下效果" class="headerlink" title="设计一个函数至少实现以下效果"></a>设计一个函数至少实现以下效果</h3><ul>
 <li><strong>MyCircularQueue(k): 构造器，设置队列长度为 k 。</strong></li>
 <li><strong>Front: 从队首获取元素。如果队列为空，返回 -1 。</strong></li>
 <li><strong>Rear: 获取队尾元素。如果队列为空，返回 -1 。</strong></li>
@@ -254,7 +254,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#设计循环队列"><span class="toc-text">设计循环队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#先简单讲下队列"><span class="toc-text">先简单讲下队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环队列"><span class="toc-text">循环队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计一个函数MyCircularQueue至少实现以下效果"><span class="toc-text">设计一个函数MyCircularQueue至少实现以下效果</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#设计循环队列"><span class="toc-text">设计循环队列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#先简单讲下队列"><span class="toc-text">先简单讲下队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环队列"><span class="toc-text">循环队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计一个函数至少实现以下效果"><span class="toc-text">设计一个函数至少实现以下效果</span></a></li></ol></li></ol>
         
     </div>
 </aside>
