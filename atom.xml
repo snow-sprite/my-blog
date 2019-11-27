@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2019-11-22T16:52:46.622Z</updated>
+  <updated>2019-11-27T12:28:50.411Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有效的括号</title>
+    <link href="https://snow-sprite.github.io/posts/308e5841.html"/>
+    <id>https://snow-sprite.github.io/posts/308e5841.html</id>
+    <published>2019-11-27T12:26:54.000Z</published>
+    <updated>2019-11-27T12:28:50.411Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;2-有效的括号&quot;&gt;&lt;a href=&quot;#2-有效的括号&quot; class=&quot;headerlink&quot; title=&quot;2.有效的括号&quot;&gt;&lt;/a&gt;2.有效的括号&lt;/h2&gt;&lt;p&gt;给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>再见鼠绘</title>

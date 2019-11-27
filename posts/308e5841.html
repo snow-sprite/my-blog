@@ -31,7 +31,7 @@
     <!--Title-->
 
 
-<title>再见鼠绘 | 之欧舟 | Blog</title>
+<title>有效的括号 | 之欧舟 | Blog</title>
 
 
     <link rel="alternate" href="/atom.xml" title="之欧舟 | Blog" type="application/atom+xml">
@@ -128,9 +128,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="再见鼠绘">
+        <h1 id="有效的括号">
             
-	            再见鼠绘
+	            有效的括号
             
         </h1>
         <div class="post-meta">
@@ -159,7 +159,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2019/11/23</span>
+            <span class="date-meta">2019/11/27</span>
         </span>
         
             <span class="fa-wrap">
@@ -175,13 +175,20 @@
     </div>
     
     <div class="post-body post-content">
-        <h2 id="再见鼠绘"><a href="#再见鼠绘" class="headerlink" title="再见鼠绘"></a>再见鼠绘</h2><p>由于最近事比较多，连着两周没怎么追海贼，刚才想看漫画了就去鼠绘看了下还是没更新，咋回事？？？ 看底下评论大家也是一样懵。后来看到有人转发汉化组长最后一条微博，原文：</p>
-<blockquote>
-<p>抱歉，漫停，尚安，勿念。<br>日后有机会给大家交代。<br>帝都屠魔都。 ​​​​</p>
-</blockquote>
-<p> 之前由于网络原因打不开鼠绘时去隔壁企鹅看了一下，讲真企鹅汉化跟鼠绘汉化简直不是一个级别的，又是一个经典的离开，这世界真的没有谁离不开谁，只有谁舍不得离开谁。</p>
-<p> 再见鼠绘</p>
-
+        <h2 id="2-有效的括号"><a href="#2-有效的括号" class="headerlink" title="2.有效的括号"></a>2.有效的括号</h2><p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<ol>
+<li>左括号必须用相同类型的右括号闭合。</li>
+<li>左括号必须以正确的顺序闭合。</li>
+</ol>
+<p>注意空字符串可被认为是有效字符串。</p>
+<h5 id="示例1："><a href="#示例1：" class="headerlink" title="示例1："></a>示例1：</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"()"</span></span><br><span class="line">输出: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h5 id="示例2："><a href="#示例2：" class="headerlink" title="示例2："></a>示例2：</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"()[]&#123;&#125;"</span></span><br><span class="line">输出: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<h5 id="示例3："><a href="#示例3：" class="headerlink" title="示例3："></a>示例3：</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"(]"</span></span><br><span class="line">输出: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h5 id="示例4："><a href="#示例4：" class="headerlink" title="示例4："></a>示例4：</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"([)]"</span></span><br><span class="line">输出: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h5 id="示例5："><a href="#示例5：" class="headerlink" title="示例5："></a>示例5：</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: <span class="string">"&#123;[]&#125;"</span></span><br><span class="line">输出: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>思路： <strong> <em>根据栈的知识LIFO，我们可以从左往右遍历如果是左半边括号先把左半边括号（”(“, “[“，”{“）对应的另外一半先存到栈里，遇到右半边括号则比较其与栈中推出的最后一位元素是否相同，如果不同则不是有效字符串，如果相同则依次比较剩下的元素，直到栈为空则为有效字符串，不为空则为无效字符串</em> </strong></p>
+<h5 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; s</span></span><br><span class="line"><span class="comment"> * @return &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> isValid = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> arr = []</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> str <span class="keyword">of</span> s) &#123;</span><br><span class="line">        <span class="keyword">if</span> (str === <span class="string">'('</span>) &#123;</span><br><span class="line">            arr.push(<span class="string">')'</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str === <span class="string">'['</span>) &#123;</span><br><span class="line">            arr.push(<span class="string">']'</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str === <span class="string">'&#123;'</span>) &#123;</span><br><span class="line">            arr.push(<span class="string">'&#125;'</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (str !== arr.pop()) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> !arr.length</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
     </div>
     
     <div class="post-footer">
@@ -198,15 +205,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/posts/308e5841.html" class="pre-post btn btn-default" title="有效的括号">
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">有效的括号</span>
-        </a>
     
-    
-        <a href="/posts/61605a2e.html" class="next-post btn btn-default" title="1.设计循环队列">
+        <a href="/posts/140ab620.html" class="next-post btn btn-default" title="再见鼠绘">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">1.设计循环队列</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">再见鼠绘</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -249,7 +251,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#再见鼠绘"><span class="toc-text">再见鼠绘</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-有效的括号"><span class="toc-text">2.有效的括号</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#示例1："><span class="toc-text">示例1：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例2："><span class="toc-text">示例2：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例3："><span class="toc-text">示例3：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例4："><span class="toc-text">示例4：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#示例5："><span class="toc-text">示例5：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#实现"><span class="toc-text">实现</span></a></li></ol></li></ol>
         
     </div>
 </aside>
