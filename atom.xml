@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2019-12-09T13:27:46.724Z</updated>
+  <updated>2019-12-09T15:21:27.128Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://snow-sprite.github.io/posts/65cfa396.html"/>
     <id>https://snow-sprite.github.io/posts/65cfa396.html</id>
     <published>2019-12-09T12:30:03.000Z</published>
-    <updated>2019-12-09T13:27:46.724Z</updated>
+    <updated>2019-12-09T15:21:27.128Z</updated>
     
     <summary type="html">
     
@@ -30,14 +30,14 @@
         
         
           &lt;p&gt;周末雾霾太大了，没出门。今天周一早上上班出门吓我一跳，这天气腾云驾霾，发一波旧照片找找感觉。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/./img/cloud/IMG_20190608_191748.jpg&quot; alt=&quot;初时&quot;&gt;&lt;br&gt;&lt;img
+&lt;p&gt;&lt;img src=&quot;/./img/cloud/IMG_20190608_191748.min.jpg&quot; alt=&quot;初时&quot;&gt;&lt;br&gt;&lt;img
         
       
     
     </summary>
     
     
-      <category term="old_time" scheme="https://snow-sprite.github.io/tags/old-time/"/>
+      <category term="thinking" scheme="https://snow-sprite.github.io/tags/thinking/"/>
     
   </entry>
   
@@ -70,7 +70,7 @@
     <link href="https://snow-sprite.github.io/posts/140ab620.html"/>
     <id>https://snow-sprite.github.io/posts/140ab620.html</id>
     <published>2019-11-22T16:52:00.000Z</published>
-    <updated>2019-11-27T12:34:18.183Z</updated>
+    <updated>2019-12-09T15:21:33.112Z</updated>
     
     <summary type="html">
     
@@ -84,6 +84,8 @@
     
     </summary>
     
+    
+      <category term="thinking" scheme="https://snow-sprite.github.io/tags/thinking/"/>
     
   </entry>
   
@@ -140,12 +142,14 @@
     <link href="https://snow-sprite.github.io/posts/6d323993.html"/>
     <id>https://snow-sprite.github.io/posts/6d323993.html</id>
     <published>2019-02-19T09:45:53.000Z</published>
-    <updated>2019-02-20T10:22:21.000Z</updated>
+    <updated>2019-12-09T15:23:42.045Z</updated>
     
     <summary type="html">
     
     </summary>
     
+    
+      <category term="thinking" scheme="https://snow-sprite.github.io/tags/thinking/"/>
     
   </entry>
   
@@ -154,7 +158,7 @@
     <link href="https://snow-sprite.github.io/posts/2a70ced8.html"/>
     <id>https://snow-sprite.github.io/posts/2a70ced8.html</id>
     <published>2019-01-18T10:33:05.000Z</published>
-    <updated>2019-02-18T10:18:28.550Z</updated>
+    <updated>2019-12-09T15:23:05.734Z</updated>
     
     <summary type="html">
     
@@ -169,6 +173,8 @@
     </summary>
     
     
+      <category term="thinking" scheme="https://snow-sprite.github.io/tags/thinking/"/>
+    
   </entry>
   
   <entry>
@@ -176,7 +182,7 @@
     <link href="https://snow-sprite.github.io/posts/4a17b156.html"/>
     <id>https://snow-sprite.github.io/posts/4a17b156.html</id>
     <published>2019-01-10T02:26:22.000Z</published>
-    <updated>2019-02-18T10:38:37.041Z</updated>
+    <updated>2019-12-09T15:23:19.351Z</updated>
     
     <summary type="html">
     
@@ -190,6 +196,8 @@
     
     </summary>
     
+    
+      <category term="thinking" scheme="https://snow-sprite.github.io/tags/thinking/"/>
     
   </entry>
   
