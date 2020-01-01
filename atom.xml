@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2020-01-01T08:36:46.585Z</updated>
+  <updated>2020-01-01T08:49:55.329Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://snow-sprite.github.io/posts/2fd14b43.html"/>
     <id>https://snow-sprite.github.io/posts/2fd14b43.html</id>
     <published>2020-01-01T08:19:09.000Z</published>
-    <updated>2020-01-01T08:36:46.585Z</updated>
+    <updated>2020-01-01T08:49:55.329Z</updated>
     
     <summary type="html">
     
@@ -36,6 +36,8 @@
     </summary>
     
     
+      <category term="年度总结" scheme="https://snow-sprite.github.io/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
+    
   </entry>
   
   <entry>
@@ -43,7 +45,7 @@
     <link href="https://snow-sprite.github.io/posts/c05f9ad0.html"/>
     <id>https://snow-sprite.github.io/posts/c05f9ad0.html</id>
     <published>2019-12-10T12:05:56.000Z</published>
-    <updated>2019-12-10T12:17:36.401Z</updated>
+    <updated>2020-01-01T08:49:55.329Z</updated>
     
     <summary type="html">
     
@@ -61,7 +63,7 @@
     </summary>
     
     
-      <category term="thought" scheme="https://snow-sprite.github.io/tags/thought/"/>
+      <category term="几见" scheme="https://snow-sprite.github.io/tags/%E5%87%A0%E8%A7%81/"/>
     
   </entry>
   
@@ -70,7 +72,7 @@
     <link href="https://snow-sprite.github.io/posts/65cfa396.html"/>
     <id>https://snow-sprite.github.io/posts/65cfa396.html</id>
     <published>2019-12-09T12:30:03.000Z</published>
-    <updated>2019-12-09T15:35:10.017Z</updated>
+    <updated>2020-01-01T08:49:55.329Z</updated>
     
     <summary type="html">
     
@@ -86,7 +88,7 @@
     </summary>
     
     
-      <category term="thought" scheme="https://snow-sprite.github.io/tags/thought/"/>
+      <category term="几见" scheme="https://snow-sprite.github.io/tags/%E5%87%A0%E8%A7%81/"/>
     
   </entry>
   
@@ -95,7 +97,7 @@
     <link href="https://snow-sprite.github.io/posts/308e5841.html"/>
     <id>https://snow-sprite.github.io/posts/308e5841.html</id>
     <published>2019-11-27T12:26:54.000Z</published>
-    <updated>2019-12-01T09:31:51.188Z</updated>
+    <updated>2020-01-01T08:40:38.602Z</updated>
     
     <summary type="html">
     
@@ -110,7 +112,7 @@
     </summary>
     
     
-      <category term="algorithm" scheme="https://snow-sprite.github.io/tags/algorithm/"/>
+      <category term="算法" scheme="https://snow-sprite.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -119,7 +121,7 @@
     <link href="https://snow-sprite.github.io/posts/140ab620.html"/>
     <id>https://snow-sprite.github.io/posts/140ab620.html</id>
     <published>2019-11-22T16:52:00.000Z</published>
-    <updated>2019-12-09T15:34:38.769Z</updated>
+    <updated>2020-01-01T08:49:55.329Z</updated>
     
     <summary type="html">
     
@@ -134,7 +136,7 @@
     </summary>
     
     
-      <category term="thought" scheme="https://snow-sprite.github.io/tags/thought/"/>
+      <category term="几见" scheme="https://snow-sprite.github.io/tags/%E5%87%A0%E8%A7%81/"/>
     
   </entry>
   
@@ -143,7 +145,7 @@
     <link href="https://snow-sprite.github.io/posts/61605a2e.html"/>
     <id>https://snow-sprite.github.io/posts/61605a2e.html</id>
     <published>2019-11-22T13:38:41.000Z</published>
-    <updated>2019-11-27T12:36:30.924Z</updated>
+    <updated>2020-01-01T08:40:50.208Z</updated>
     
     <summary type="html">
     
@@ -158,7 +160,7 @@
     </summary>
     
     
-      <category term="algorithm" scheme="https://snow-sprite.github.io/tags/algorithm/"/>
+      <category term="算法" scheme="https://snow-sprite.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
@@ -167,7 +169,7 @@
     <link href="https://snow-sprite.github.io/posts/b2b0af19.html"/>
     <id>https://snow-sprite.github.io/posts/b2b0af19.html</id>
     <published>2019-03-04T07:58:55.000Z</published>
-    <updated>2019-04-03T10:27:06.639Z</updated>
+    <updated>2020-01-01T08:45:33.729Z</updated>
     
     <summary type="html">
     
@@ -182,7 +184,7 @@
     </summary>
     
     
-      <category term="tool" scheme="https://snow-sprite.github.io/tags/tool/"/>
+      <category term="工具" scheme="https://snow-sprite.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -191,14 +193,14 @@
     <link href="https://snow-sprite.github.io/posts/6d323993.html"/>
     <id>https://snow-sprite.github.io/posts/6d323993.html</id>
     <published>2019-02-19T09:45:53.000Z</published>
-    <updated>2019-12-09T15:34:27.839Z</updated>
+    <updated>2020-01-01T08:49:55.329Z</updated>
     
     <summary type="html">
     
     </summary>
     
     
-      <category term="thought" scheme="https://snow-sprite.github.io/tags/thought/"/>
+      <category term="几见" scheme="https://snow-sprite.github.io/tags/%E5%87%A0%E8%A7%81/"/>
     
   </entry>
   
@@ -207,7 +209,7 @@
     <link href="https://snow-sprite.github.io/posts/2a70ced8.html"/>
     <id>https://snow-sprite.github.io/posts/2a70ced8.html</id>
     <published>2019-01-18T10:33:05.000Z</published>
-    <updated>2019-12-09T15:34:49.398Z</updated>
+    <updated>2020-01-01T08:49:55.329Z</updated>
     
     <summary type="html">
     
@@ -222,7 +224,7 @@
     </summary>
     
     
-      <category term="thought" scheme="https://snow-sprite.github.io/tags/thought/"/>
+      <category term="几见" scheme="https://snow-sprite.github.io/tags/%E5%87%A0%E8%A7%81/"/>
     
   </entry>
   
@@ -231,7 +233,7 @@
     <link href="https://snow-sprite.github.io/posts/4a17b156.html"/>
     <id>https://snow-sprite.github.io/posts/4a17b156.html</id>
     <published>2019-01-10T02:26:22.000Z</published>
-    <updated>2019-12-09T15:34:59.368Z</updated>
+    <updated>2020-01-01T08:49:55.329Z</updated>
     
     <summary type="html">
     
@@ -246,7 +248,7 @@
     </summary>
     
     
-      <category term="thought" scheme="https://snow-sprite.github.io/tags/thought/"/>
+      <category term="几见" scheme="https://snow-sprite.github.io/tags/%E5%87%A0%E8%A7%81/"/>
     
   </entry>
   
