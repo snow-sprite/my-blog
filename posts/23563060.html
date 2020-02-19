@@ -31,7 +31,7 @@
     <!--Title-->
 
 
-<title>Flutter环境搭建 | 之欧舟 | Blog</title>
+<title>React-diff | 之欧舟 | Blog</title>
 
 
     <link rel="alternate" href="/atom.xml" title="之欧舟 | Blog" type="application/atom+xml">
@@ -128,9 +128,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Flutter环境搭建">
+        <h1 id="React-diff">
             
-	            Flutter环境搭建
+	            React-diff
             
         </h1>
         <div class="post-meta">
@@ -163,7 +163,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2020/02/19</span>
+            <span class="date-meta">2020/02/12</span>
         </span>
         
             <span class="fa-wrap">
@@ -179,76 +179,82 @@
     </div>
     
     <div class="post-body post-content">
-        <h3 id="flutter"><a href="#flutter" class="headerlink" title="flutter"></a>flutter</h3><blockquote>
-<p>flutter makes it easy and fast to build beautiful mobile apps.</p>
-</blockquote>
-<p>使用<code>flutter</code>或者<code>react native</code>的主要原因，一般都会是UI一端通用，开发快。就目前而言<code>flutter</code>没有<code>react native</code>生态丰富，毕竟<code>react native</code>开源时间早，积累了一部分用户。但是由于fb的开源协议使得国内一些中大型公司不得不放弃<code>react native</code>，当然还有其他原因比如应用没有原生流畅、后期维护成本高等等。。。</p>
-<p>2018年2月世界移动大会上谷歌开源了第一个Fullter Beat版本。现在已经吸引了越来越多的开发者，生态也慢慢的建立起来了。相对于<code>react native</code>，<code>flutter</code>拥有更接近于原生的ui样式，并且包含的许多核心<code>Widget</code>如：导航、图标、字体等，可以在Android和iOS上达到跟原生一样的体验。</p>
-<h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><ul>
-<li><p>热重载（Hot Reload）</p>
-<p>这个优点简直无敌了，在最多几秒的时间内更新新的ui、功能、修复bug等，之前开发过iOS应用，每更新一个新功能就得重启一次应用，简直慢的要死。。。</p>
-</li>
-<li><p>富有表现力，漂亮的用户界面</p>
-<p><code>flutter</code>内置美丽的Material Design和Cupertino(iOS风格) widget，丰富的motionApi、平滑而自然的滑动效果和平台感知。</p>
-</li>
-<li><p>使用<code>Dart</code>开发语言</p>
-</li>
-<li><p>一切皆<code>Widget</code>的理念</p>
-</li>
-<li><p>借助可移植的GPU加速渲染引擎以及高性能本地代码可以达到跨平台设备的高质量用户体验。</p>
-</li>
-</ul>
-<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><ol>
-<li><p>由于网络问题，<code>flutter</code>官方为中国开发者搭建了临时镜像，将其加入到环境变量：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PUB_HOSTED_URL=https:<span class="comment">//pub.`flutter`-io.cn</span></span><br><span class="line"><span class="keyword">export</span> <span class="string">`flutter`</span>_STORAGE_BASE_URL=https:<span class="comment">//storage.`flutter`-io.cn</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取<code>flutter</code> SDK</p>
+        <h3 id="React-diff"><a href="#React-diff" class="headerlink" title="React-diff"></a>React-diff</h3><p>React是根据Virtual DOM的对比来更新DOM的。这种用来对比的方法被称为diff算法，该算法由fb进一步的优化，使得React的渲染性能得到进一步提升。</p>
+<h5 id="1-传统diff"><a href="#1-传统diff" class="headerlink" title="1. 传统diff"></a>1. 传统diff</h5><p>传统diff算法通过循环递归对节点进行依次对比，效率低下，使得算法复杂度为O(n^3)，如果节点数过于庞大，即使cpu的计算速度达到30亿次/s，也很难在1s内计算出结果。</p>
+<p>​    1）<code>Tree edit distance</code>（树的编辑距离）</p>
+<p>从左图修改成右图</p>
+<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/tree edit distance.png" alt></p>
 <ul>
-<li><p>下载地址：<a href="https://`flutter`.io/sdk-archive/#macos" target="_blank" rel="noopener">https://`flutter`.io/sdk-archive/#macos</a></p>
+<li><p>删除ul节点</p>
 </li>
-<li><p>运行<code>./flutter/bin/flutter --version</code></p>
-<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/flutter version.png" alt></p>
+<li><p>添加p节点</p>
 </li>
-<li><p>运行<code>flutter upgrade</code>更新版本</p>
-</li>
-<li><p>临时添加<code>flutter</code>相关工具到path中：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PATH=<span class="string">`pwd`</span>/flutter/bin:$PATH</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>永久添加<code>flutter</code>相关工具到path中：</p>
+<li>添加text</li>
+</ul>
+<p>在递归过程中依次将当前节点拆分成子树，然后依次计算每个子树的edit distance，所以上图的树的最小编辑距离为3</p>
+<p>​    2）Tree edit distance算法演进</p>
+<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/Tree edit distance演进.png" alt></p>
+<h5 id="2-React的diff"><a href="#2-React的diff" class="headerlink" title="2. React的diff"></a>2. React的diff</h5><p>diff算法的复杂度取决于策略，React采用的三大策略将diff复杂度由O(n^3)转化为O(n)，效果提升如图：</p>
+<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/react diff 性能提升.png" alt></p>
+<p>三大策略分别为：</p>
 <ul>
-<li><p>打开<code>$HOME/.bash_profile</code></p>
-</li>
-<li><p>添加以下命令，[PATH_TO_FLUTTER_GIT_DIRECTORY]为flutter repo clone地址</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PUB_HOSTED_URL=https:<span class="comment">//pub.flutter-io.cn //国内用户需要设置</span></span><br><span class="line"><span class="keyword">export</span> FLUTTER_STORAGE_BASE_URL=https:<span class="comment">//storage.flutter-io.cn //国内用户需要设置</span></span><br><span class="line"><span class="keyword">export</span> PATH=PATH_TO_FLUTTER_GIT_DIRECTORY/flutter/bin:$PATH</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>运行<code>source $HOME/.bash_profile</code>刷新当前终端端口。</p>
-</li>
-<li><p>运行<code>flutter/bin</code>验证目录是否已经在PATH中</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $PATH</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行<code>flutter doctor</code>安装其他必须依赖</p>
-</li>
-<li><p>iOS设置</p>
+<li><p>tree diff</p>
 <ul>
-<li><p>安装Xcode7.2及以上</p>
-</li>
-<li><p>测试ios模拟器，建议使用iPhone5及以上</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -a Simulator</span><br></pre></td></tr></table></figure>
+<li>React对树的算法进行了简洁的优化，由于DOM节点操作涉及到跨层级的移动操作少到可以忽略不计，所以React只对树进行分层比较。当发现节点已经不存在时，会删除该节点及所有子节点，不回再做多余的遍历比较，只需要对树进行依次比较即可。</li>
+</ul>
+<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/tree edit.png" alt></p>
+<ul>
+<li><p>如果涉及到了DOM的跨层级操作，React只会执行添加和删除2个操作，先添加一个新节点，然后添加子节点，再删除旧节点。如下图，执行步骤为： create A =&gt; create B =&gt; create C =&gt; delete A</p>
+<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/tree edit 跨层级.png" alt></p>
+<p><strong>A节点会被重新创建而不是移动，所以React官方建议不要进行DOM节点的跨层级操作，可以通过css属性的隐藏、显示对节点操作，而不是真正的删除、插入节点。</strong></p>
 </li>
 </ul>
 </li>
-<li><p>配置编辑器</p>
-<p>…</p>
+<li><p>component diff</p>
+<p>React是基于组件构建应用的，对组件的diff也非常简洁</p>
+<ul>
+<li>同一类型组件，按照原策略进行Visual DOM对比</li>
+<li>同一类型组件，Visual DOM没发生任何变化，React提供一个shouldComponentUpdate api供用户手动选择是否需要进行diff比较，如果使用了forceUpdate则强制比较，shouldComponentUpdate失效。</li>
+<li>不同类型组件，将原有组件标记为dirty component，删除旧组件重新添加新组件。</li>
+</ul>
 </li>
-<li><p>应用初体验</p>
-<p>直观感受热更新确实比<code>react native</code>做的更平滑更流畅。</p>
-<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/flutter hello_world.png" style="zoom:50%;"></p>
+<li><p>element diff</p>
+<p>当节点处于同一层时，diff提供了3种节点操作</p>
+<ul>
+<li><p>INSERT_MARKUP</p>
+<ul>
+<li>组件C不在集合（AB）中，需要插入操作</li>
+</ul>
 </li>
-</ol>
+<li><p>REMOVE_NODE</p>
+<ul>
+<li><p>组件C在集合（ABC）中，集合需要变成新集合（AB），则需要删除C</p>
+</li>
+<li><p>组件C在集合（ABC）中，但C改变了，不能复用和移动，需要删除C在新建C</p>
+</li>
+</ul>
+</li>
+<li><p>MOVE_EXISTING</p>
+<ul>
+<li>组件C在集合（ABC）中，集合更新时需要将C和A的位置调换，传统diff需要将C移动到A的位置，并将C和旧A进行diff，再添加C，React diff只需要将C移动到A位置，并添加一个<code>唯一的key</code>进行区分，直接移动即可。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><ul>
+<li>React diff对传统diff进行优化，使得算法复杂度成几何倍减小</li>
+<li>尽量减少对DOM跨层级的操作，尤其是将列表最后一项移动到列首</li>
+<li>对于同一层级的一组子节点，通过设置唯一<code>key</code>来进行区分</li>
+<li><p>开发组件时，保持稳定的DOM结构有助于性能的提升</p>
+</li>
+<li><p>懂得借助react diff去解决实际开发中的一系列问题</p>
+</li>
+</ul>
+<h5 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h5><p><a href="https://www.jianshu.com/p/3ba0822018cf" target="_blank" rel="noopener">https://www.jianshu.com/p/3ba0822018cf</a></p>
+<p><a href="https://www.jianshu.com/p/8e5aee42be35" target="_blank" rel="noopener">https://www.jianshu.com/p/8e5aee42be35</a></p>
+<p><a href="https://segmentfault.com/a/1190000018914249#item-4-5" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018914249#item-4-5</a></p>
+<p><a href="https://www.zhihu.com/question/66851503" target="_blank" rel="noopener">https://www.zhihu.com/question/66851503</a></p>
 
     </div>
     
@@ -266,10 +272,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
+        <a href="/posts/cb417bc6.html" class="pre-post btn btn-default" title="Redux">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Redux</span>
+        </a>
     
-        <a href="/posts/7b792714.html" class="next-post btn btn-default" title="小酌React-hooks(2)">
+    
+        <a href="/posts/d99ac760.html" class="next-post btn btn-default" title="React-Vnode">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">小酌React-hooks(2)</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">React-Vnode</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -322,7 +333,7 @@ var Clock=(function(){var g,v,b=true,d,o=400,H={up:false,shift:false},E=[],f="hs
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#flutter"><span class="toc-text">flutter</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#特点"><span class="toc-text">特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#React-diff"><span class="toc-text">React-diff</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-传统diff"><span class="toc-text">1. 传统diff</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-React的diff"><span class="toc-text">2. React的diff</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#总结"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol></li></ol>
         
     </div>
 </aside>

@@ -31,7 +31,7 @@
     <!--Title-->
 
 
-<title>Flutter环境搭建 | 之欧舟 | Blog</title>
+<title>Redux | 之欧舟 | Blog</title>
 
 
     <link rel="alternate" href="/atom.xml" title="之欧舟 | Blog" type="application/atom+xml">
@@ -128,9 +128,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Flutter环境搭建">
+        <h1 id="Redux">
             
-	            Flutter环境搭建
+	            Redux
             
         </h1>
         <div class="post-meta">
@@ -163,7 +163,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2020/02/19</span>
+            <span class="date-meta">2020/02/13</span>
         </span>
         
             <span class="fa-wrap">
@@ -179,76 +179,53 @@
     </div>
     
     <div class="post-body post-content">
-        <h3 id="flutter"><a href="#flutter" class="headerlink" title="flutter"></a>flutter</h3><blockquote>
-<p>flutter makes it easy and fast to build beautiful mobile apps.</p>
+        <h3 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h3><p align="right" style="color:#999;">周宁 zhouning@Cid</p>
+
+<h4 id="1-什么是redux"><a href="#1-什么是redux" class="headerlink" title="1. 什么是redux"></a>1. 什么是redux</h4><blockquote>
+<p>redux是javascript状态容器，由flux发展而来，提供可预测化的状态管理。</p>
 </blockquote>
-<p>使用<code>flutter</code>或者<code>react native</code>的主要原因，一般都会是UI一端通用，开发快。就目前而言<code>flutter</code>没有<code>react native</code>生态丰富，毕竟<code>react native</code>开源时间早，积累了一部分用户。但是由于fb的开源协议使得国内一些中大型公司不得不放弃<code>react native</code>，当然还有其他原因比如应用没有原生流畅、后期维护成本高等等。。。</p>
-<p>2018年2月世界移动大会上谷歌开源了第一个Fullter Beat版本。现在已经吸引了越来越多的开发者，生态也慢慢的建立起来了。相对于<code>react native</code>，<code>flutter</code>拥有更接近于原生的ui样式，并且包含的许多核心<code>Widget</code>如：导航、图标、字体等，可以在Android和iOS上达到跟原生一样的体验。</p>
-<h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><ul>
-<li><p>热重载（Hot Reload）</p>
-<p>这个优点简直无敌了，在最多几秒的时间内更新新的ui、功能、修复bug等，之前开发过iOS应用，每更新一个新功能就得重启一次应用，简直慢的要死。。。</p>
+<h4 id="2-什么时候用"><a href="#2-什么时候用" class="headerlink" title="2. 什么时候用"></a>2. 什么时候用</h4><p>​        小型项目只使用react完全够用，数据管理使用props，state即可。但随着业务复杂度的增加，单纯使用react显得有点捉襟见肘，比如一个组件A嵌套多层组件，当传递到子组件E时，纯靠props传递显得有点不爽，中间BCD组件可能并不需要props数据，但迫于无奈仍需要传递。或者是兄弟组件之间想要共享某些数据，也不是很方便。诸如此类的情况，就有必要引入redux了。</p>
+<h4 id="3-好处"><a href="#3-好处" class="headerlink" title="3. 好处"></a>3. 好处</h4><p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/store.png" alt></p>
+<h4 id="3-redux三大原则"><a href="#3-redux三大原则" class="headerlink" title="3. redux三大原则"></a>3. redux三大原则</h4><ul>
+<li><p><strong>单一数据源</strong></p>
+<p>整个应用的state被存储在一棵object tree中，并且这个object tree只存在于唯一一个store中。</p>
 </li>
-<li><p>富有表现力，漂亮的用户界面</p>
-<p><code>flutter</code>内置美丽的Material Design和Cupertino(iOS风格) widget，丰富的motionApi、平滑而自然的滑动效果和平台感知。</p>
+<li><p><strong>State只读</strong></p>
+<p>唯一改变state的方法就是触发action，action是一个用于描述已发生事件的对象。</p>
 </li>
-<li><p>使用<code>Dart</code>开发语言</p>
-</li>
-<li><p>一切皆<code>Widget</code>的理念</p>
-</li>
-<li><p>借助可移植的GPU加速渲染引擎以及高性能本地代码可以达到跨平台设备的高质量用户体验。</p>
+<li><p><strong>改变数据只能通过纯函数实现</strong></p>
+<p>action改变state，需要reducers，Reducer只是一些纯函数，它接受先前的state和action，并返回新的state。</p>
 </li>
 </ul>
-<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><ol>
-<li><p>由于网络问题，<code>flutter</code>官方为中国开发者搭建了临时镜像，将其加入到环境变量：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PUB_HOSTED_URL=https:<span class="comment">//pub.`flutter`-io.cn</span></span><br><span class="line"><span class="keyword">export</span> <span class="string">`flutter`</span>_STORAGE_BASE_URL=https:<span class="comment">//storage.`flutter`-io.cn</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-核心api"><a href="#4-核心api" class="headerlink" title="4. 核心api"></a>4. 核心api</h4><ul>
+<li><p>Action</p>
+<p>一般改变store状态数据会通过<code>store.dispatch()</code>将action传到store，Action内部必须使用一个字符串类型<code>type</code>来表示将要执行的动作，多数情况下<code>type</code>会被定义为字符串常量，当应用规模越来越大，可以使用单独的模块或文件存放action。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ADD, UPDATE &#125; <span class="keyword">from</span> <span class="string">'../actionTypes'</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>获取<code>flutter</code> SDK</p>
+<li><p>reducer</p>
+<p>reducer是一个纯函数，根据previousState和action计算出新的state，指定应用状态的改变如何响应action并发送到store</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reducer(previousState, action)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>store</p>
+<p>Redux的核心，由Redux提供的createStore(reducer, defaultState)方法生成，并生成三个方法，<code>getState()</code>,<code>dispatch()</code>,<code>subscrible()</code></p>
+</li>
+<li><p>三者之间的关系</p>
+<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/redux.png" style="zoom:50%;"></p>
+</li>
+</ul>
+<h3 id="React-redux"><a href="#React-redux" class="headerlink" title="React-redux"></a>React-redux</h3><ul>
+<li><p>connect</p>
+<p>connect连接React和Redux store，返回一个已与Redux store连接的新组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span></span><br><span class="line"><span class="keyword">import</span> &#123; add &#125; <span class="keyword">from</span> <span class="string">'./store/actions/cart-actions'</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">App</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  constrctor(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props)</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;&#125;</span><br><span class="line">  &#125;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connet(add)(App)</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <ul>
-<li><p>下载地址：<a href="https://`flutter`.io/sdk-archive/#macos" target="_blank" rel="noopener">https://`flutter`.io/sdk-archive/#macos</a></p>
-</li>
-<li><p>运行<code>./flutter/bin/flutter --version</code></p>
-<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/flutter version.png" alt></p>
-</li>
-<li><p>运行<code>flutter upgrade</code>更新版本</p>
-</li>
-<li><p>临时添加<code>flutter</code>相关工具到path中：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PATH=<span class="string">`pwd`</span>/flutter/bin:$PATH</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>永久添加<code>flutter</code>相关工具到path中：</p>
-<ul>
-<li><p>打开<code>$HOME/.bash_profile</code></p>
-</li>
-<li><p>添加以下命令，[PATH_TO_FLUTTER_GIT_DIRECTORY]为flutter repo clone地址</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PUB_HOSTED_URL=https:<span class="comment">//pub.flutter-io.cn //国内用户需要设置</span></span><br><span class="line"><span class="keyword">export</span> FLUTTER_STORAGE_BASE_URL=https:<span class="comment">//storage.flutter-io.cn //国内用户需要设置</span></span><br><span class="line"><span class="keyword">export</span> PATH=PATH_TO_FLUTTER_GIT_DIRECTORY/flutter/bin:$PATH</span><br></pre></td></tr></table></figure>
+<li><p>Provider</p>
+<p>使用React的context可以实现跨组件之间的传递原理，实现store的全局访问，将store传给每个组件。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> &#123; Provider &#125; <span class="keyword">from</span> <span class="string">'react-redux'</span></span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span></span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span></span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">	&lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">  	&lt;App /&gt;</span><br><span class="line">  &lt;<span class="regexp">/Provider&gt;,</span></span><br><span class="line"><span class="regexp">	document.querySelector('app')</span></span><br><span class="line"><span class="regexp">)</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-</li>
-</ul>
-</li>
-<li><p>运行<code>source $HOME/.bash_profile</code>刷新当前终端端口。</p>
-</li>
-<li><p>运行<code>flutter/bin</code>验证目录是否已经在PATH中</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $PATH</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行<code>flutter doctor</code>安装其他必须依赖</p>
-</li>
-<li><p>iOS设置</p>
-<ul>
-<li><p>安装Xcode7.2及以上</p>
-</li>
-<li><p>测试ios模拟器，建议使用iPhone5及以上</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -a Simulator</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>配置编辑器</p>
-<p>…</p>
-</li>
-<li><p>应用初体验</p>
-<p>直观感受热更新确实比<code>react native</code>做的更平滑更流畅。</p>
-<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/flutter hello_world.png" style="zoom:50%;"></p>
-</li>
-</ol>
+<h3 id="Redux-amp-React-redux"><a href="#Redux-amp-React-redux" class="headerlink" title="Redux &amp; React-redux"></a>Redux &amp; React-redux</h3><p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/react-redux.png" style="zoom:50%;"></p>
 
     </div>
     
@@ -266,10 +243,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
+        <a href="/posts/fcea62c9.html" class="pre-post btn btn-default" title="Redux-Saga">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">Redux-Saga</span>
+        </a>
     
-        <a href="/posts/7b792714.html" class="next-post btn btn-default" title="小酌React-hooks(2)">
+    
+        <a href="/posts/23563060.html" class="next-post btn btn-default" title="React-diff">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">小酌React-hooks(2)</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">React-diff</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -322,7 +304,7 @@ var Clock=(function(){var g,v,b=true,d,o=400,H={up:false,shift:false},E=[],f="hs
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#flutter"><span class="toc-text">flutter</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#特点"><span class="toc-text">特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Redux"><span class="toc-text">Redux</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-什么是redux"><span class="toc-text">1. 什么是redux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-什么时候用"><span class="toc-text">2. 什么时候用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-好处"><span class="toc-text">3. 好处</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-redux三大原则"><span class="toc-text">3. redux三大原则</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-核心api"><span class="toc-text">4. 核心api</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#React-redux"><span class="toc-text">React-redux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Redux-amp-React-redux"><span class="toc-text">Redux &amp; React-redux</span></a></li></ol>
         
     </div>
 </aside>

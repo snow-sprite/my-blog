@@ -31,7 +31,7 @@
     <!--Title-->
 
 
-<title>Flutter环境搭建 | 之欧舟 | Blog</title>
+<title>React | 之欧舟 | Blog</title>
 
 
     <link rel="alternate" href="/atom.xml" title="之欧舟 | Blog" type="application/atom+xml">
@@ -128,9 +128,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Flutter环境搭建">
+        <h1 id="React">
             
-	            Flutter环境搭建
+	            React
             
         </h1>
         <div class="post-meta">
@@ -163,7 +163,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2020/02/19</span>
+            <span class="date-meta">2020/02/10</span>
         </span>
         
             <span class="fa-wrap">
@@ -179,76 +179,57 @@
     </div>
     
     <div class="post-body post-content">
-        <h3 id="flutter"><a href="#flutter" class="headerlink" title="flutter"></a>flutter</h3><blockquote>
-<p>flutter makes it easy and fast to build beautiful mobile apps.</p>
+        <h3 id="React基础"><a href="#React基础" class="headerlink" title="React基础"></a><center>React基础</center></h3> <p align="right" style="color: #999;"><em>周宁  zhouning@Cid</em></p>
+
+<blockquote>
+<p>React是由facebook开源的一款前端库，适用于中大型前端项目</p>
 </blockquote>
-<p>使用<code>flutter</code>或者<code>react native</code>的主要原因，一般都会是UI一端通用，开发快。就目前而言<code>flutter</code>没有<code>react native</code>生态丰富，毕竟<code>react native</code>开源时间早，积累了一部分用户。但是由于fb的开源协议使得国内一些中大型公司不得不放弃<code>react native</code>，当然还有其他原因比如应用没有原生流畅、后期维护成本高等等。。。</p>
-<p>2018年2月世界移动大会上谷歌开源了第一个Fullter Beat版本。现在已经吸引了越来越多的开发者，生态也慢慢的建立起来了。相对于<code>react native</code>，<code>flutter</code>拥有更接近于原生的ui样式，并且包含的许多核心<code>Widget</code>如：导航、图标、字体等，可以在Android和iOS上达到跟原生一样的体验。</p>
-<h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><ul>
-<li><p>热重载（Hot Reload）</p>
-<p>这个优点简直无敌了，在最多几秒的时间内更新新的ui、功能、修复bug等，之前开发过iOS应用，每更新一个新功能就得重启一次应用，简直慢的要死。。。</p>
-</li>
-<li><p>富有表现力，漂亮的用户界面</p>
-<p><code>flutter</code>内置美丽的Material Design和Cupertino(iOS风格) widget，丰富的motionApi、平滑而自然的滑动效果和平台感知。</p>
-</li>
-<li><p>使用<code>Dart</code>开发语言</p>
-</li>
-<li><p>一切皆<code>Widget</code>的理念</p>
-</li>
-<li><p>借助可移植的GPU加速渲染引擎以及高性能本地代码可以达到跨平台设备的高质量用户体验。</p>
-</li>
-</ul>
-<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><ol>
-<li><p>由于网络问题，<code>flutter</code>官方为中国开发者搭建了临时镜像，将其加入到环境变量：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PUB_HOSTED_URL=https:<span class="comment">//pub.`flutter`-io.cn</span></span><br><span class="line"><span class="keyword">export</span> <span class="string">`flutter`</span>_STORAGE_BASE_URL=https:<span class="comment">//storage.`flutter`-io.cn</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取<code>flutter</code> SDK</p>
+<h4 id="jsx"><a href="#jsx" class="headerlink" title="jsx"></a>jsx</h4><p>javascript语法扩展，更好的处理渲染逻辑与ui逻辑内在耦合。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> element = (</span><br><span class="line">	&lt;h1&gt;hello, world!&lt;/h1&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>在编译阶段，Babel会将当前项目所有jsx转译为<code>React.createElement()</code>函数调用，返回当前组件内元素及其属性等。</p>
+<h4 id="元素渲染"><a href="#元素渲染" class="headerlink" title="元素渲染"></a>元素渲染</h4><p>React使用单<code>{}</code>渲染数据。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  constrctor(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props)</span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">      text: <span class="string">'hello, world!'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; text &#125; = <span class="keyword">this</span>.state</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">    	&lt;h1&gt;&#123; text &#125;&lt;<span class="regexp">/h1&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>使用React构建的应用通常有且仅有一个根结点，只需要将所有的元素传入到<code>ReactDOM.render()</code>即可。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ReactDOM.render(element, <span class="built_in">document</span>.querySelector(<span class="string">'app'</span>))</span><br></pre></td></tr></table></figure>
+<h4 id="组件-amp-amp-props"><a href="#组件-amp-amp-props" class="headerlink" title="组件 &amp;&amp; props"></a>组件 &amp;&amp; props</h4><blockquote>
+<p>组件允许你将ui拆分为独立可复用的代码片段，并对每个片段进行独立构思。接收任意的入参（即“props”），并返回用于描述页面展示内容的React元素。</p>
+</blockquote>
 <ul>
-<li><p>下载地址：<a href="https://`flutter`.io/sdk-archive/#macos" target="_blank" rel="noopener">https://`flutter`.io/sdk-archive/#macos</a></p>
+<li><p>函数式组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Demo</span>(<span class="params">props</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &lt;h1&gt;hello, &#123; props.word &#125;&lt;/h1&gt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>运行<code>./flutter/bin/flutter --version</code></p>
-<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/flutter version.png" alt></p>
-</li>
-<li><p>运行<code>flutter upgrade</code>更新版本</p>
-</li>
-<li><p>临时添加<code>flutter</code>相关工具到path中：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PATH=<span class="string">`pwd`</span>/flutter/bin:$PATH</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>永久添加<code>flutter</code>相关工具到path中：</p>
-<ul>
-<li><p>打开<code>$HOME/.bash_profile</code></p>
-</li>
-<li><p>添加以下命令，[PATH_TO_FLUTTER_GIT_DIRECTORY]为flutter repo clone地址</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PUB_HOSTED_URL=https:<span class="comment">//pub.flutter-io.cn //国内用户需要设置</span></span><br><span class="line"><span class="keyword">export</span> FLUTTER_STORAGE_BASE_URL=https:<span class="comment">//storage.flutter-io.cn //国内用户需要设置</span></span><br><span class="line"><span class="keyword">export</span> PATH=PATH_TO_FLUTTER_GIT_DIRECTORY/flutter/bin:$PATH</span><br></pre></td></tr></table></figure>
+<li><p>class组件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">    <span class="keyword">super</span>(props)</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    <span class="keyword">return</span> &lt;h1&gt;hello, &#123; this.props.word &#125;&lt;/h1&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><em>以上两个组件在React中效果是相同的</em></p>
 </li>
 </ul>
-</li>
+<h4 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h4><ul>
+<li>挂载<ul>
+<li><strong>componentDidMount()</strong></li>
 </ul>
 </li>
-<li><p>运行<code>source $HOME/.bash_profile</code>刷新当前终端端口。</p>
-</li>
-<li><p>运行<code>flutter/bin</code>验证目录是否已经在PATH中</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $PATH</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行<code>flutter doctor</code>安装其他必须依赖</p>
-</li>
-<li><p>iOS设置</p>
-<ul>
-<li><p>安装Xcode7.2及以上</p>
-</li>
-<li><p>测试ios模拟器，建议使用iPhone5及以上</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -a Simulator</span><br></pre></td></tr></table></figure>
-</li>
+<li>更新<ul>
+<li>shouldComponentUpdate()</li>
+<li>getSnapshotBeforeUpdate()</li>
+<li><strong>componentDidUpdate()</strong></li>
 </ul>
 </li>
-<li><p>配置编辑器</p>
-<p>…</p>
+<li>卸载<ul>
+<li><strong>componentWillUnmount()</strong></li>
+</ul>
 </li>
-<li><p>应用初体验</p>
-<p>直观感受热更新确实比<code>react native</code>做的更平滑更流畅。</p>
-<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/flutter hello_world.png" style="zoom:50%;"></p>
+<li>错误处理<ul>
+<li>componentDidCatch()</li>
+</ul>
 </li>
-</ol>
+<li>图示：</li>
+</ul>
+<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/React生命周期.png" alt="react生命周期图示" style="zoom:50%;"></p>
+<h4 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h4><p>jsx中使用javascipt条件语句判断即可</p>
+<h4 id="列表渲染"><a href="#列表渲染" class="headerlink" title="列表渲染"></a>列表渲染</h4><p>使用javascript的数组方法map遍历即可</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> numbers = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line"><span class="keyword">const</span> listItems = numbers.map(<span class="function"><span class="params">number</span> =&gt;</span> &#123;</span><br><span class="line">  &lt;li key=&#123;number.toString()&#125;&gt;&#123; number &#125;&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">&#125;)</span></span><br></pre></td></tr></table></figure>
+<h4 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h4><p>将事件名传入到click事件即可，一般为方便使用（this的绑定）直接绑定闭包即可</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button onClick=&#123;() =&gt; <span class="keyword">this</span>.handleClick()&#125;&gt;&lt;/button&gt;</span><br></pre></td></tr></table></figure>
 
     </div>
     
@@ -266,10 +247,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
+        <a href="/posts/d99ac760.html" class="pre-post btn btn-default" title="React-Vnode">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">React-Vnode</span>
+        </a>
     
-        <a href="/posts/7b792714.html" class="next-post btn btn-default" title="小酌React-hooks(2)">
+    
+        <a href="/posts/762638ef.html" class="next-post btn btn-default" title="studay">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">小酌React-hooks(2)</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">studay</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -322,7 +308,7 @@ var Clock=(function(){var g,v,b=true,d,o=400,H={up:false,shift:false},E=[],f="hs
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#flutter"><span class="toc-text">flutter</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#特点"><span class="toc-text">特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#React基础"><span class="toc-text">React基础</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jsx"><span class="toc-text">jsx</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#元素渲染"><span class="toc-text">元素渲染</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#组件-amp-amp-props"><span class="toc-text">组件 &amp;&amp; props</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#生命周期"><span class="toc-text">生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#条件渲染"><span class="toc-text">条件渲染</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#列表渲染"><span class="toc-text">列表渲染</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#事件处理"><span class="toc-text">事件处理</span></a></li></ol></li></ol>
         
     </div>
 </aside>

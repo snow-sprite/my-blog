@@ -31,7 +31,7 @@
     <!--Title-->
 
 
-<title>Flutter环境搭建 | 之欧舟 | Blog</title>
+<title>Redux-Saga | 之欧舟 | Blog</title>
 
 
     <link rel="alternate" href="/atom.xml" title="之欧舟 | Blog" type="application/atom+xml">
@@ -128,9 +128,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Flutter环境搭建">
+        <h1 id="Redux-Saga">
             
-	            Flutter环境搭建
+	            Redux-Saga
             
         </h1>
         <div class="post-meta">
@@ -163,7 +163,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2020/02/19</span>
+            <span class="date-meta">2020/02/14</span>
         </span>
         
             <span class="fa-wrap">
@@ -179,76 +179,34 @@
     </div>
     
     <div class="post-body post-content">
-        <h3 id="flutter"><a href="#flutter" class="headerlink" title="flutter"></a>flutter</h3><blockquote>
-<p>flutter makes it easy and fast to build beautiful mobile apps.</p>
-</blockquote>
-<p>使用<code>flutter</code>或者<code>react native</code>的主要原因，一般都会是UI一端通用，开发快。就目前而言<code>flutter</code>没有<code>react native</code>生态丰富，毕竟<code>react native</code>开源时间早，积累了一部分用户。但是由于fb的开源协议使得国内一些中大型公司不得不放弃<code>react native</code>，当然还有其他原因比如应用没有原生流畅、后期维护成本高等等。。。</p>
-<p>2018年2月世界移动大会上谷歌开源了第一个Fullter Beat版本。现在已经吸引了越来越多的开发者，生态也慢慢的建立起来了。相对于<code>react native</code>，<code>flutter</code>拥有更接近于原生的ui样式，并且包含的许多核心<code>Widget</code>如：导航、图标、字体等，可以在Android和iOS上达到跟原生一样的体验。</p>
-<h5 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h5><ul>
-<li><p>热重载（Hot Reload）</p>
-<p>这个优点简直无敌了，在最多几秒的时间内更新新的ui、功能、修复bug等，之前开发过iOS应用，每更新一个新功能就得重启一次应用，简直慢的要死。。。</p>
-</li>
-<li><p>富有表现力，漂亮的用户界面</p>
-<p><code>flutter</code>内置美丽的Material Design和Cupertino(iOS风格) widget，丰富的motionApi、平滑而自然的滑动效果和平台感知。</p>
-</li>
-<li><p>使用<code>Dart</code>开发语言</p>
-</li>
-<li><p>一切皆<code>Widget</code>的理念</p>
-</li>
-<li><p>借助可移植的GPU加速渲染引擎以及高性能本地代码可以达到跨平台设备的高质量用户体验。</p>
-</li>
-</ul>
-<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><ol>
-<li><p>由于网络问题，<code>flutter</code>官方为中国开发者搭建了临时镜像，将其加入到环境变量：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PUB_HOSTED_URL=https:<span class="comment">//pub.`flutter`-io.cn</span></span><br><span class="line"><span class="keyword">export</span> <span class="string">`flutter`</span>_STORAGE_BASE_URL=https:<span class="comment">//storage.`flutter`-io.cn</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取<code>flutter</code> SDK</p>
+        <h3 id="Redux-Saga"><a href="#Redux-Saga" class="headerlink" title="Redux-Saga"></a>Redux-Saga</h3><p><code>Redux-saga</code>是一个用于管理应用程序Side Effect（副作用， 例如异步获取数据，访问浏览器缓存等）库，目标是让副作用管理更容易，执行更高效，测试更简单，处理故障时更容易。</p>
+<p>在<code>reduxs-saga</code>中，sages都是由Generator实现的，从Generator中yield一个纯javascript对象以表达那些Saga逻辑。我们称呼那些对象为Effect。</p>
+<p>一个saga就像一个单独的线程，独自负责处理副作用。<code>redux-saga</code>是一个redux中间件，意味着这个线程可以通过正常的redux action从主程序启动，暂停，取消，它能访问完整的redux state，以及dispatch redux action。</p>
+<p><code>Redux-saga</code>使用了ES6的Generator功能，让异步的流程更加易于读取，写入和测试。</p>
+<p>简单使用：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Demo</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span></span>&#123;</span><br><span class="line">  ...</span><br><span class="line">  onSomeButtonClicked() &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; userId, dispatch &#125; = <span class="keyword">this</span>.props</span><br><span class="line">    dispatch(&#123; <span class="attr">type</span>: <span class="string">'USER_FETCH_REQUESTED'</span>， payload: &#123; userId &#125; &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">	...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>sagas.js</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; call, put, takeEvery &#125; <span class="keyword">from</span> <span class="string">'redux-saga/effects'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取用户数据</span></span><br><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">fetchUser</span>(<span class="params">action</span>) </span>&#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span>* <span class="title">mySaga</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 允许事件并发，触发获取用户数据事件</span></span><br><span class="line">  <span class="keyword">yield</span> takeEvery(<span class="string">'USER_FETCH_REQUESTED'</span>, fetchUser)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> mySaga</span><br></pre></td></tr></table></figure>
+<p><code>main.js</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createStore, applyMiddleware, compose &#125; <span class="keyword">from</span> <span class="string">'redux'</span></span><br><span class="line"><span class="keyword">import</span> createSagaMiddleware <span class="keyword">from</span> <span class="string">'redux-saga'</span></span><br><span class="line"><span class="keyword">import</span> reducer <span class="keyword">from</span> <span class="string">'...'</span></span><br><span class="line"><span class="keyword">import</span> mySaga <span class="keyword">from</span> <span class="string">'./sagas'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> composeEnhancers = <span class="built_in">window</span>.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose</span><br><span class="line"><span class="keyword">const</span> sagaMiddleware = createSagaMiddleware()</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> store = createStore(</span><br><span class="line">	reducer,</span><br><span class="line">  composeEnhancers(</span><br><span class="line">    applyMiddleware(sagaMiddleware)</span><br><span class="line">  )</span><br><span class="line">)</span><br><span class="line">sagaMiddleware.run(mySaga)</span><br></pre></td></tr></table></figure>
+<p>常用Effect创建器</p>
 <ul>
-<li><p>下载地址：<a href="https://`flutter`.io/sdk-archive/#macos" target="_blank" rel="noopener">https://`flutter`.io/sdk-archive/#macos</a></p>
-</li>
-<li><p>运行<code>./flutter/bin/flutter --version</code></p>
-<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/flutter version.png" alt></p>
-</li>
-<li><p>运行<code>flutter upgrade</code>更新版本</p>
-</li>
-<li><p>临时添加<code>flutter</code>相关工具到path中：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PATH=<span class="string">`pwd`</span>/flutter/bin:$PATH</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>永久添加<code>flutter</code>相关工具到path中：</p>
+<li>take</li>
+<li>put</li>
+<li>call</li>
+<li>apply</li>
+<li>cancel</li>
+<li>join</li>
+<li>getContext</li>
+<li>…</li>
+</ul>
+<p>常见saga辅助函数</p>
 <ul>
-<li><p>打开<code>$HOME/.bash_profile</code></p>
-</li>
-<li><p>添加以下命令，[PATH_TO_FLUTTER_GIT_DIRECTORY]为flutter repo clone地址</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> PUB_HOSTED_URL=https:<span class="comment">//pub.flutter-io.cn //国内用户需要设置</span></span><br><span class="line"><span class="keyword">export</span> FLUTTER_STORAGE_BASE_URL=https:<span class="comment">//storage.flutter-io.cn //国内用户需要设置</span></span><br><span class="line"><span class="keyword">export</span> PATH=PATH_TO_FLUTTER_GIT_DIRECTORY/flutter/bin:$PATH</span><br></pre></td></tr></table></figure>
-</li>
+<li>takeEvery</li>
+<li>takeLatest</li>
 </ul>
-</li>
-</ul>
-</li>
-<li><p>运行<code>source $HOME/.bash_profile</code>刷新当前终端端口。</p>
-</li>
-<li><p>运行<code>flutter/bin</code>验证目录是否已经在PATH中</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $PATH</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>运行<code>flutter doctor</code>安装其他必须依赖</p>
-</li>
-<li><p>iOS设置</p>
-<ul>
-<li><p>安装Xcode7.2及以上</p>
-</li>
-<li><p>测试ios模拟器，建议使用iPhone5及以上</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open -a Simulator</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>配置编辑器</p>
-<p>…</p>
-</li>
-<li><p>应用初体验</p>
-<p>直观感受热更新确实比<code>react native</code>做的更平滑更流畅。</p>
-<p><img src="https://static-zhiozhou.oss-cn-beijing.aliyuncs.com/oss-imgs/flutter hello_world.png" style="zoom:50%;"></p>
-</li>
-</ol>
+<p>学习连接</p>
+<p><a href="https://redux-saga.js.org" target="_blank" rel="noopener">https://redux-saga.js.org</a></p>
 
     </div>
     
@@ -266,10 +224,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
+        <a href="/posts/4aba2710.html" class="pre-post btn btn-default" title="小酌React-hooks">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">小酌React-hooks</span>
+        </a>
     
-        <a href="/posts/7b792714.html" class="next-post btn btn-default" title="小酌React-hooks(2)">
+    
+        <a href="/posts/cb417bc6.html" class="next-post btn btn-default" title="Redux">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">小酌React-hooks(2)</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">Redux</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -322,7 +285,7 @@ var Clock=(function(){var g,v,b=true,d,o=400,H={up:false,shift:false},E=[],f="hs
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#flutter"><span class="toc-text">flutter</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#特点"><span class="toc-text">特点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#安装"><span class="toc-text">安装</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Redux-Saga"><span class="toc-text">Redux-Saga</span></a></li></ol>
         
     </div>
 </aside>

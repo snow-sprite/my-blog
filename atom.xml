@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2020-02-19T09:55:40.730Z</updated>
+  <updated>2020-02-19T10:06:05.629Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://snow-sprite.github.io/posts/791d854e.html"/>
     <id>https://snow-sprite.github.io/posts/791d854e.html</id>
     <published>2020-02-19T09:54:13.000Z</published>
-    <updated>2020-02-19T09:55:40.730Z</updated>
+    <updated>2020-02-19T10:06:05.629Z</updated>
     
     <summary type="html">
     
@@ -37,6 +37,8 @@
     </summary>
     
     
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
+    
   </entry>
   
   <entry>
@@ -44,7 +46,7 @@
     <link href="https://snow-sprite.github.io/posts/7b792714.html"/>
     <id>https://snow-sprite.github.io/posts/7b792714.html</id>
     <published>2020-02-18T10:18:34.000Z</published>
-    <updated>2020-02-18T10:20:36.473Z</updated>
+    <updated>2020-02-19T10:05:58.020Z</updated>
     
     <summary type="html">
     
@@ -59,6 +61,8 @@
     </summary>
     
     
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
+    
   </entry>
   
   <entry>
@@ -66,7 +70,7 @@
     <link href="https://snow-sprite.github.io/posts/4aba2710.html"/>
     <id>https://snow-sprite.github.io/posts/4aba2710.html</id>
     <published>2020-02-17T09:55:54.000Z</published>
-    <updated>2020-02-17T09:59:10.888Z</updated>
+    <updated>2020-02-19T10:06:18.131Z</updated>
     
     <summary type="html">
     
@@ -81,7 +85,127 @@
     </summary>
     
     
-      <category term="javascript" scheme="https://snow-sprite.github.io/tags/javascript/"/>
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redux-Saga</title>
+    <link href="https://snow-sprite.github.io/posts/fcea62c9.html"/>
+    <id>https://snow-sprite.github.io/posts/fcea62c9.html</id>
+    <published>2020-02-14T09:56:56.000Z</published>
+    <updated>2020-02-19T10:08:31.856Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Redux-Saga&quot;&gt;&lt;a href=&quot;#Redux-Saga&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redux</title>
+    <link href="https://snow-sprite.github.io/posts/cb417bc6.html"/>
+    <id>https://snow-sprite.github.io/posts/cb417bc6.html</id>
+    <published>2020-02-13T09:33:49.000Z</published>
+    <updated>2020-02-19T10:08:16.757Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Redux&quot;&gt;&lt;a href=&quot;#Redux&quot; class=&quot;headerlink&quot; title=&quot;Redux&quot;&gt;&lt;/a&gt;Redux&lt;/h3&gt;&lt;p align=&quot;right&quot; style=&quot;color:#999;&quot;&gt;周宁
+        
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React-diff</title>
+    <link href="https://snow-sprite.github.io/posts/23563060.html"/>
+    <id>https://snow-sprite.github.io/posts/23563060.html</id>
+    <published>2020-02-12T08:30:42.000Z</published>
+    <updated>2020-02-19T10:07:59.123Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;React-diff&quot;&gt;&lt;a href=&quot;#React-diff&quot; class=&quot;headerlink&quot; title=&quot;React-diff&quot;&gt;&lt;/a&gt;React-diff&lt;/h3&gt;&lt;p&gt;React是根据Virtual
+        
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React-Vnode</title>
+    <link href="https://snow-sprite.github.io/posts/d99ac760.html"/>
+    <id>https://snow-sprite.github.io/posts/d99ac760.html</id>
+    <published>2020-02-11T09:03:32.000Z</published>
+    <updated>2020-02-19T10:06:26.114Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;React-Vnode&quot;&gt;&lt;a href=&quot;#React-Vnode&quot; class=&quot;headerlink&quot; title=&quot;React-Vnode&quot;&gt;&lt;/a&gt;React-Vnode&lt;/h3&gt;&lt;h5 id=&quot;1-为什么用？&quot;&gt;&lt;a href=&quot;#1-为什么用？&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>React</title>
+    <link href="https://snow-sprite.github.io/posts/d8a440d1.html"/>
+    <id>https://snow-sprite.github.io/posts/d8a440d1.html</id>
+    <published>2020-02-10T10:02:52.000Z</published>
+    <updated>2020-02-19T10:10:00.235Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;React基础&quot;&gt;&lt;a href=&quot;#React基础&quot; class=&quot;headerlink&quot; title=&quot;React基础&quot;&gt;&lt;/a&gt;&lt;center&gt;React基础&lt;/center&gt;&lt;/h3&gt; &lt;p align=&quot;right&quot; style=&quot;color:
+        
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
     
   </entry>
   
@@ -90,7 +214,7 @@
     <link href="https://snow-sprite.github.io/posts/762638ef.html"/>
     <id>https://snow-sprite.github.io/posts/762638ef.html</id>
     <published>2020-02-10T07:00:18.000Z</published>
-    <updated>2020-02-19T10:01:10.542Z</updated>
+    <updated>2020-02-19T10:06:51.194Z</updated>
     
     <summary type="html">
     
@@ -105,6 +229,8 @@
     
     </summary>
     
+    
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
     
   </entry>
   
