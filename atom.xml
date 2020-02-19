@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2020-02-18T10:20:36.473Z</updated>
+  <updated>2020-02-19T09:55:29.442Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flutter环境搭建</title>
+    <link href="https://snow-sprite.github.io/posts/791d854e.html"/>
+    <id>https://snow-sprite.github.io/posts/791d854e.html</id>
+    <published>2020-02-19T09:54:13.000Z</published>
+    <updated>2020-02-19T09:55:29.442Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;flutter&quot;&gt;&lt;a href=&quot;#flutter&quot; class=&quot;headerlink&quot; title=&quot;flutter&quot;&gt;&lt;/a&gt;flutter&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;flutter makes it easy and fast to
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>小酌React-hooks(2)</title>
