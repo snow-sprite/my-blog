@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2020-05-01T06:29:58.897Z</updated>
+  <updated>2020-05-01T06:35:38.435Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://snow-sprite.github.io/posts/431d9de8.html"/>
     <id>https://snow-sprite.github.io/posts/431d9de8.html</id>
     <published>2020-05-01T06:28:10.000Z</published>
-    <updated>2020-05-01T06:29:58.897Z</updated>
+    <updated>2020-05-01T06:35:38.435Z</updated>
     
     <summary type="html">
     
@@ -37,6 +37,30 @@
     
     
       <category term="vue-awesome" scheme="https://snow-sprite.github.io/tags/vue-awesome/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于海贼王的一点个人看法</title>
+    <link href="https://snow-sprite.github.io/posts/1815927e.html"/>
+    <id>https://snow-sprite.github.io/posts/1815927e.html</id>
+    <published>2020-05-01T06:20:15.000Z</published>
+    <updated>2020-05-01T07:28:35.715Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;昨晚睡的太晚了，今天又起晚了，吃了饭看了会网上各种关于海贼王情报的分析，什么样的分析都有甚至有一些听起来还是那么回事，对于海贼的最终走向发表一些个人的猜测吧，日后打脸就当没说过-
+        
+      
+    
+    </summary>
+    
+    
+      <category term="己见" scheme="https://snow-sprite.github.io/tags/%E5%B7%B1%E8%A7%81/"/>
     
   </entry>
   
@@ -474,22 +498,6 @@
     
     
       <category term="工具" scheme="https://snow-sprite.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>年后第一篇</title>
-    <link href="https://snow-sprite.github.io/posts/6d323993.html"/>
-    <id>https://snow-sprite.github.io/posts/6d323993.html</id>
-    <published>2019-02-19T09:45:53.000Z</published>
-    <updated>2020-01-01T08:49:55.329Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="几见" scheme="https://snow-sprite.github.io/tags/%E5%87%A0%E8%A7%81/"/>
     
   </entry>
   
