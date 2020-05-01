@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2020-02-20T09:53:48.799Z</updated>
+  <updated>2020-05-01T06:29:58.897Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue3.0之ref vs reactive</title>
+    <link href="https://snow-sprite.github.io/posts/431d9de8.html"/>
+    <id>https://snow-sprite.github.io/posts/431d9de8.html</id>
+    <published>2020-05-01T06:28:10.000Z</published>
+    <updated>2020-05-01T06:29:58.897Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;vue3的ref和reactive分别何时使用？&quot;&gt;&lt;a href=&quot;#vue3的ref和reactive分别何时使用？&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="vue-awesome" scheme="https://snow-sprite.github.io/tags/vue-awesome/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter（2）</title>
@@ -461,30 +485,6 @@
     <updated>2020-01-01T08:49:55.329Z</updated>
     
     <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="几见" scheme="https://snow-sprite.github.io/tags/%E5%87%A0%E8%A7%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Happy New Year</title>
-    <link href="https://snow-sprite.github.io/posts/2a70ced8.html"/>
-    <id>https://snow-sprite.github.io/posts/2a70ced8.html</id>
-    <published>2019-01-18T10:33:05.000Z</published>
-    <updated>2020-01-01T08:49:55.329Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;马上过年了，预祝各位新的一年里芝麻开花，玉兔东升。&quot;&gt;&lt;a href=&quot;#马上过年了，预祝各位新的一年里芝麻开花，玉兔东升。&quot; class=&quot;headerlink&quot;
-        
-      
     
     </summary>
     
