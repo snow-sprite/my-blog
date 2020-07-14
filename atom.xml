@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2020-05-01T07:40:32.013Z</updated>
+  <updated>2020-07-14T14:39:40.059Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Compress your images</title>
+    <link href="https://snow-sprite.github.io/posts/29f86fc.html"/>
+    <id>https://snow-sprite.github.io/posts/29f86fc.html</id>
+    <published>2020-07-14T14:37:32.000Z</published>
+    <updated>2020-07-14T14:39:40.059Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h4&gt;&lt;p&gt;起初并没有开发桌面应用的想法，一是之前了解过这个技术但没有研究过，二是懒…
+        
+      
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="https://snow-sprite.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>关于海贼王的一点个人看法</title>
@@ -474,30 +498,6 @@
     
     
       <category term="算法" scheme="https://snow-sprite.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nvm的安装</title>
-    <link href="https://snow-sprite.github.io/posts/b2b0af19.html"/>
-    <id>https://snow-sprite.github.io/posts/b2b0af19.html</id>
-    <published>2019-03-04T07:58:55.000Z</published>
-    <updated>2020-01-01T08:45:33.729Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;卸载当前node&quot;&gt;&lt;a href=&quot;#卸载当前node&quot; class=&quot;headerlink&quot; title=&quot;卸载当前node&quot;&gt;&lt;/a&gt;卸载当前node&lt;/h2&gt;&lt;h4 id=&quot;官网pkg安装包安装的&quot;&gt;&lt;a href=&quot;#官网pkg安装包安装的&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="工具" scheme="https://snow-sprite.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
