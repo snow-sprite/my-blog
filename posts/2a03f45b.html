@@ -31,7 +31,7 @@
     <!--Title-->
 
 
-<title>归档：2019/2 | 之欧舟 | Blog</title>
+<title>http-request.md | 之欧舟 | Blog</title>
 
 
     <link rel="alternate" href="/atom.xml" title="之欧舟 | Blog" type="application/atom+xml">
@@ -124,305 +124,153 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <div id="main">
-     <div class="timebox">
-          <div class="timeline">
-              <ul>
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="http-request.md">
+            
+	            http-request.md
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
                 
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                
-                    
-                    
-                        
-                            
-                            <h2>2019</h2>
-                        
-                        
-                          <li class="hide">
-                        
-                            <h3>
-                              10<span>12月</span>
-                            </h3>
-                            <a href="/posts/c05f9ad0.html" title="2019年的第二场雪" target="_blank">2019年的第二场雪</a>
-                        </li>
-                    
-                
-                    
-                    
-                        
-                        
-                          <li class="hide">
-                        
-                            <h3>
-                              09<span>12月</span>
-                            </h3>
-                            <a href="/posts/65cfa396.html" title="Bad attitude" target="_blank">Bad attitude</a>
-                        </li>
-                    
-                
-                    
-                    
-                        
-                        
-                          <li class="hide">
-                        
-                            <h3>
-                              27<span>11月</span>
-                            </h3>
-                            <a href="/posts/308e5841.html" title="2.有效的括号" target="_blank">2.有效的括号</a>
-                        </li>
-                    
-                
-                    
-                    
-                        
-                        
-                          <li class="hide">
-                        
-                            <h3>
-                              23<span>11月</span>
-                            </h3>
-                            <a href="/posts/140ab620.html" title="再见鼠绘" target="_blank">再见鼠绘</a>
-                        </li>
-                    
-                
-                    
-                    
-                        
-                        
-                          <li class="hide">
-                        
-                            <h3>
-                              22<span>11月</span>
-                            </h3>
-                            <a href="/posts/61605a2e.html" title="1.设计循环队列" target="_blank">1.设计循环队列</a>
-                        </li>
-                    
-                
-                    
-                    
-                        
-                        
-                          <li class="hide">
-                        
-                            <h3>
-                              04<span>03月</span>
-                            </h3>
-                            <a href="/posts/b2b0af19.html" title="nvm的安装" target="_blank">nvm的安装</a>
-                        </li>
-                    
-                
-                    
-                    
-                        
-                        
-                          <li class>
-                        
-                            <h3>
-                              19<span>02月</span>
-                            </h3>
-                            <a href="/posts/6d323993.html" title="年后第一篇" target="_blank">年后第一篇</a>
-                        </li>
-                    
-                
-                    
-                    
-                        
-                        
-                          <li class="hide">
-                        
-                            <h3>
-                              18<span>01月</span>
-                            </h3>
-                            <a href="/posts/2a70ced8.html" title="Happy New Year" target="_blank">Happy New Year</a>
-                        </li>
-                    
-                
-                    
-                    
-                        
-                        
-                          <li class="hide">
-                        
-                            <h3>
-                              10<span>01月</span>
-                            </h3>
-                            <a href="/posts/4a17b156.html" title="Hello World" target="_blank">Hello World</a>
-                        </li>
-                    
-                
-              </ul>
-          </div>
-    </div>
+            
+        </span>
+    </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2021/01/07</span>
+        </span>
+        
+            <span class="fa-wrap">
+                <i class="fa fa-eye"></i>
+                <span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    
 </div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="Form-Data-vs-Request-Payload"><a href="#Form-Data-vs-Request-Payload" class="headerlink" title="Form Data vs Request Payload"></a><center>Form Data <i style="font-size: 14px;">vs</i> Request Payload</center></h2><p>前几天在与后端的调试中发现一个问题，因为触及到了知识盲区，特此记录。</p>
+<p>——————————————————华——————丽———————的————————分————————割————————线———————————————————</p>
+<p>一次普通的api调用中，使用post发请求，发送的params后端一直说没收到参数，F12发现参数确确实实已经发送了。如图：<br></p>
+<p><img src="/./img/webs/formData.png" alt="FormData"></p>
+<p>使用swagger发送同样的参数请求后端却可以接收到参数：<br></p>
+<p><img src="/./img/webs/RequestPayload.png" alt="RequestPayload"></p>
+<p>通过比对发现，两者的不同在于一个参数类型是Form Data，一个是Request Payload。什么意思呢？<br></p>
+<p><strong>百度一下 你就知道</strong><br></p>
+<p> Request Payload更准确的说是http request的payload body。一般用在数据通过POST请求或者PUT请求。它是HTTP请求中<i>空行</i>的后面那部分。（PS:这里涉及一个http常被问到的问题，http请求由哪几部分组成，一般是请求行，请求头，<i>空行</i>，请求体。payload body应该是对应请求体。）</p>
+<p>一个请求伴随着headers设置为Content-Type: application/json时，参数看起来是这样的：<br></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">POST /some-path HTTP/<span class="number">1.1</span></span><br><span class="line"> Content-Type: application/json</span><br><span class="line"></span><br><span class="line">&#123; <span class="string">"foo"</span> : <span class="string">"bar"</span>, <span class="string">"name"</span> : <span class="string">"John"</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>如果你只是正常的请求一个ajax请求，浏览器是会把你提交的params作为Payload展示出来，因为他也不知道params来自哪里。<br>但如果你提交的请求设置了method=”POST” 并且headers设置了Content-Type: application/x-www-form-urlencoded或者Content-Type: multipart/form-data，那么你的请求看起来就是下面这样的，类似GET请求里的参数拼接：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">POST /some-path HTTP/<span class="number">1.1</span></span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line"></span><br><span class="line">foo=bar&amp;name=Jack</span><br></pre></td></tr></table></figure>
+<p>这里的<code>form data</code>就是<code>request payload</code>，在这里浏览器知道的更多：他知道<code>bar</code>是表单<code>foo</code>的值<code>Jack</code>是<code>name</code>的值，所以这里做了展示。<br><br>在回到之前的问题，通过观察图片发现，两者的区别确实是因为headers中Content Type的值设置不同导致的：<br><br><img src="/./img/webs/compare.png" alt="compare"></p>
+<p>通过查看request.js证实了这个验证：<br><br><img src="/./img/webs/http.png" alt="http"><br>解决办法：<br></p>
+<blockquote>
+<p>在请求中，设置一个header即可<br><img src="/./img/webs/api.png" alt="api"></p>
+</blockquote>
+<p>参考：<a href="https://segmentfault.com/a/1190000018774494" target="_blank" rel="noopener">https://segmentfault.com/a/1190000018774494</a></p>
+
+    </div>
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="https://weibo.com/u/6414426992?refer_flag=1005055010_" target="_blank">zhiozhou</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/posts/8d783f86.html" class="next-post btn btn-default" title="2020-12-12">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">2020-12-12</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+    
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'c7evBjqIHfXaFfsOBrzT5Dju-gzGzoHsz',
+            appKey: 'p20NBdG7YyuhxIzjKteza9Av',
+            placeholder: '说点什么吧...',
+            notify: true,
+            verify: true,
+            avatar: 'mm',
+            meta: 'nick,mail,link'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
+
+
+    </div>
+
+
 
 
 
                 </main>
                 
-                    
-    <aside class="col-md-4 sidebar">
-        
-        
+                    <aside style="height: 100px;margin-bottom: 10px;" role="navigation" class="col-md-4">
+    <div class>
+        <canvas style="width: 100%;height:100%;" id="canvas">
+            <p class="nope">No canvas, no particles</p>
+        </canvas>
+    </div>
+</aside>
+<script>
+var Clock=(function(){var g,v,b=true,d,o=400,H={up:false,shift:false},E=[],f="hsla(0, 0%, 100%, 0.3)",k={x:0,y:0},r=false,F=false,l,n=150,p=false,w=100,q=true,s=800;var y=20,i=800,a=400,e=600,u=Math.PI*2;var G=function(){n=150;f="hsla(0, 0%, 100%, 0.3)";var I={0:"#333333",0.5:"#222222"};z(I)};var j=function(I){v.fillStyle=f;v.beginPath();v.arc(I.x,I.y,I.size,0,u,true);v.closePath();v.fill()};var x=function(){for(var P=0,M=E.length;P<M;P++){var K=E[P];if(K.inText){var I=k.x-K.px,Q=k.y-K.py,L=Math.atan2(Q,I),N,J=Math.cos(L),O=Math.sin(L);N=(H.shift===true)?-1:1;K.x+=N*(Math.pow((J-1),2)-1)+K.velocityX*K.delta;K.y+=N*(Math.pow((O-1),2)-1)+K.velocityY*K.delta;K.px=K.x;K.py=K.y;j(K)}}};var C=function(M){var J=new Date(),I=J.getHours(),L="";/*if(M){I=(I>12)?I-=12:I;I=(I==0)?12:I}else{I=B(I)}*/var K=B(J.getMinutes());var N=B(J.getSeconds());return{hours:I,minutes:K,seconds:N,timeString:I+" : "+K+" : "+N}};var D=function(){v.clearRect(0,0,s,o);var N=C(true);n=150;if(p===true){if(w>0){n=180;l="?";w--}else{l=N.timeString}c(300)}else{if(q===true&&b===true){var J=N.hours+N.minutes+N.seconds;c(J);l=N.timeString}else{G();l=N.timeString}}v.fillStyle="rgb(255, 255, 255)";v.textBaseline="middle";v.font=n+"px 'Avenir', 'Helvetica Neue', 'Arial', 'sans-serif'";v.fillText(l,(s-v.measureText(l).width)*0.5,o*0.5);var M=v.getImageData(0,0,s,o);v.clearRect(0,0,s,o);if(b===true){v.fillStyle=d;v.fillRect(0,0,s,o)}if(r===false){for(var K=0,I=E.length;K<I;K++){var L=E[K];L.inText=false}h(M)}else{x()}FPS.update("fps")};var B=function(I){return("0"+I).substr(-2)};var h=function(K){var O=[];for(var ab=s;ab>0;ab-=6){for(var U=0;U<s;U+=6){var Z=(ab+U*(s))*4;if(K.data[Z]>10){O.push([ab,U])}}}var W=O.length;for(var R=0;R<O.length&&R<E.length;R++){try{var L=E[R],N,J;if(F){N=(O[W-1][0])-(L.px+Math.random()*5);J=(O[W-1][1])-(L.py+Math.random()*5)}else{N=(O[W-1][0])-L.px;J=(O[W-1][1])-L.py}var P=Math.sqrt(N*N+J*J);var M=Math.atan2(J,N);var I=Math.cos(M);var Q=Math.sin(M);L.x=L.px+I*P*L.delta;L.y=L.py+Q*P*L.delta;L.px=L.x;L.py=L.y;L.inText=true;j(L);if(H.up===true){L.size+=0.3}else{var V=L.size-0.5;if(V>L.origSize&&V>0){L.size=V}else{L.size=m.origSize}}}catch(aa){}W--}};var A=function(I){if(I.offsetX){return{x:I.offsetX,y:I.offsetY}}else{if(I.layerX){return{x:I.layerX,y:I.layerY}}else{return{x:I.pageX-g.offsetLeft,y:I.pageY-g.offsetTop}}}};var t=function(){s=Math.max(window.innerWidth,i);o=Math.max(window.innerHeight,a);g.width=s;g.height=o;g.style.position="absolute";g.style.left="0px";g.style.top="0px"};var z=function(K){d=v.createRadialGradient(s/2,o/2,0,s/2,o/2,s);for(var I in K){var J=K[I];d.addColorStop(I,J)}};var c=function(I){var J={0:"hsl("+I+", 100%, 100%)",0.5:"hsl("+I+", 10%, 50%)"};f="hsla("+I+", 10%, 50%, 0.3)";z(J)};return{init:function(J){g=document.getElementById(J);if(g===null||!g.getContext){return}v=g.getContext("2d");t();this.ui();for(var I=0;I<e;I++){E[I]=new Particle(g)}FPS.initialize(g,"fps");G();setInterval(D,y)},ui:function(){document.addEventListener("keydown",function(I){switch(I.keyCode){case 16:H.shift=true;I.preventDefault();break;case 38:H.up=true;I.preventDefault();break}},false);document.addEventListener("keyup",function(I){switch(I.keyCode){case 16:H.shift=false;I.preventDefault();break;case 38:H.up=false;I.preventDefault();break}},false);window.addEventListener("resize",function(I){t()},false);g.addEventListener("mousedown",function(I){r=true},false);document.addEventListener("mouseup",function(I){r=false},false);g.addEventListener("mousemove",function(I){if(r){k=A(I)}},false)}}})();var Particle=function(b){var a=Math.random()*180/Math.PI,d=b.height,c=Math.random()*7;this.delta=0.25;this.x=0;this.y=0;this.px=(b.width/2)+(Math.cos(a)*d);this.py=(b.height/2)+(Math.sin(a)*d);this.velocityX=Math.floor(Math.random()*10)-5;this.velocityY=Math.floor(Math.random()*10)-5;this.size=c;this.origSize=c;this.inText=false};var FPS={delta:0,lastTime:0,frames:0,totalTime:0,updateTime:0,updateFrames:0,initialize:function(b,a){this.lastTime=(new Date()).getTime();if(!document.getElementById(a)&&document.getElementById(b)){this.createFPS(b,a)}},createFPS:function(d,b){var e=document.createElement("div");e.setAttribute("id",b);var a=document.getElementById(d);var c=a.parentNode;e.innerHTML="FPS AVG: 0 CURRENT: 0";c.appendChild(e)},update:function(b){var a=(new Date()).getTime();this.delta=a-this.lastTime;this.lastTime=a;this.updateTime+=this.delta;this.totalTime+=this.delta;this.frames++;this.updateFrames++;this.updateTime=0;this.updateFrames=0}};Clock.init("canvas");
+</script>
+                    <aside id="article-toc" role="navigation" class="col-md-4">
     <div class="widget">
-        <h3 class="title">搜索</h3>
-        <div id="search-form">
-            <div id="result-mask" class="hide"></div>
-            <div class="search-area">
-                
-                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢？">
-                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
-                
-                
-            </div>
-            <div id="result-wrap" class="hide">
-                <div id="search-result"></div>
-            </div>
-            <div class="hide">
-                <template id="search-tpl">
-                    <div class="item">
-                        <a href="/{path}" title="{title}">
-                            <div class="title">{title}</div>
-                            <div class="content">{content}</div>
-                        </a>
-                    </div>
-                </template>
-            </div>
-        </div>
-    </div>
-
+        <h3 class="title">文章目录</h3>
         
-        
-    <div class="widget">
-        <h3 class="title">网站公告</h3>
-        <div class="notification">
-            <p>
-    Welcome! Let's have fun together!
-</p>
-<div>
-    <img src="http://ww4.sinaimg.cn/large/a15b4afegy1fkjxbstyknj20vy0b0my0">
-</div>
-        </div>
-    </div>
-
-        
-        
-    <div class="widget">
-      <h3 class="title">社交</h3> 
-        <div class="content social">
-            
-	            <a href="https://github.com/snow-sprite" rel="external nofollow" title="Github" target="_blank">
-			    	<i class="git fa fa-git"></i>
-			    </a>
-            
-	            <a href="mailto:959418392@qq.com" rel="external nofollow" title="邮箱" target="_blank">
-			    	<i class="envelope-o fa fa-envelope-o"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="联系QQ" target="_blank">
-			    	<i class="qq fa fa-qq"></i>
-			    </a>
-            
-	            <a href="/" rel="external nofollow" title="微信" target="_blank">
-			    	<i class="weixin fa fa-weixin"></i>
-			    </a>
-            
-	            <a href="/atom.xml" rel="external nofollow" title="RSS" target="_blank">
-			    	<i class="feed fa fa-feed"></i>
-			    </a>
-            
-        </div>
-    </div>
-
-
-        
-        
-
-        
-        
-    <div class="widget">
-        <h3 class="title">归档</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/"><i class="fa" aria-hidden="true">2021年01月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/"><i class="fa" aria-hidden="true">2020年12月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/"><i class="fa" aria-hidden="true">2020年07月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/"><i class="fa" aria-hidden="true">2020年06月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/"><i class="fa" aria-hidden="true">2020年05月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/"><i class="fa" aria-hidden="true">2020年02月</i></a><span class="archive-list-count">10</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/"><i class="fa" aria-hidden="true">2020年01月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/"><i class="fa" aria-hidden="true">2019年12月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/"><i class="fa" aria-hidden="true">2019年11月</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/"><i class="fa" aria-hidden="true">2019年03月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/"><i class="fa" aria-hidden="true">2019年02月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/"><i class="fa" aria-hidden="true">2019年01月</i></a><span class="archive-list-count">2</span></li></ul>
-    </div>
-
-
-        
-        
-  <div class="widget">
-    <h3 class="title">标签云</h3>
-    <div class="content tag-cloud">
-        
-            <a href="/tags/js/" style="font-size: 20px;">js</a> <a href="/tags/vue-awesome/" style="font-size: 10px;">vue-awesome</a> <a href="/tags/几见/" style="font-size: 16.67px;">几见</a> <a href="/tags/工具/" style="font-size: 13.33px;">工具</a> <a href="/tags/己见/" style="font-size: 13.33px;">己见</a> <a href="/tags/算法/" style="font-size: 13.33px;">算法</a>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Form-Data-vs-Request-Payload"><span class="toc-text">Form Data vs Request Payload</span></a></li></ol>
         
     </div>
-  </div>
-
-
-        
-        
-    <div class="widget">
-        <h3 class="title">友链</h3>
-        <div class="content friends-link">
-        
-            <a href="http://www.zhiozhou.top/" class="fa" target="_blank">穿越了[停工中...]</a>
-        
-        </div>
-    </div>
-
-
-        
-    </aside>
+</aside>
 
                 
             </div>
@@ -477,8 +325,6 @@
     </div>
 </div>
 
-
-	<script src="/js/search.js?rev=@@hash"></script>
 
 
 
