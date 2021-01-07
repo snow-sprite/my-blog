@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2021-01-07T16:07:14.597Z</updated>
+  <updated>2020-12-12T14:30:09.290Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Form Data &amp; Request Payload</title>
-    <link href="https://snow-sprite.github.io/posts/2a03f45b.html"/>
-    <id>https://snow-sprite.github.io/posts/2a03f45b.html</id>
-    <published>2020-12-27T15:13:47.000Z</published>
-    <updated>2021-01-07T16:07:14.597Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;前几天在与后端的调试中发现一个问题，因为触及到了知识盲区，特此记录。&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;—————华————丽—————的—————分—————割—————线————&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;一次普通的api调用中，使用&lt;code&gt;post&lt;/code&gt;发请求，发送的&lt;c
-        
-      
-    
-    </summary>
-    
-    
-      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
-    
-  </entry>
   
   <entry>
     <title>2020-12-12</title>
@@ -424,6 +398,32 @@
     
     
       <category term="几见" scheme="https://snow-sprite.github.io/tags/%E5%87%A0%E8%A7%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Form Data &amp; Request Payload</title>
+    <link href="https://snow-sprite.github.io/posts/2a03f45b.html"/>
+    <id>https://snow-sprite.github.io/posts/2a03f45b.html</id>
+    <published>2020-01-07T15:13:47.000Z</published>
+    <updated>2021-01-07T16:12:08.807Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;前几天在与后端的调试中发现一个问题，因为触及到了知识盲区，特此记录。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;—————华————丽—————的—————分—————割—————线————&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;一次普通的api调用中，使用&lt;code&gt;post&lt;/code&gt;发请求，发送的&lt;c
+        
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
     
   </entry>
   
