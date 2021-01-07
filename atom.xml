@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2021-01-07T15:55:18.408Z</updated>
+  <updated>2021-01-07T16:07:14.597Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://snow-sprite.github.io/posts/2a03f45b.html"/>
     <id>https://snow-sprite.github.io/posts/2a03f45b.html</id>
     <published>2020-12-27T15:13:47.000Z</published>
-    <updated>2021-01-07T15:55:18.408Z</updated>
+    <updated>2021-01-07T16:07:14.597Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,9 @@
       
         
         
-          &lt;h2 id=&quot;Form-Data-vs-Request-Payload&quot;&gt;&lt;a href=&quot;#Form-Data-vs-Request-Payload&quot; class=&quot;headerlink&quot; title=&quot;Form Data vs Request
+          &lt;p&gt;前几天在与后端的调试中发现一个问题，因为触及到了知识盲区，特此记录。&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;—————华————丽—————的—————分—————割—————线————&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;一次普通的api调用中，使用&lt;code&gt;post&lt;/code&gt;发请求，发送的&lt;c
         
       
     

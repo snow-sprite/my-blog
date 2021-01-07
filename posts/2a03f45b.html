@@ -179,22 +179,22 @@
     </div>
     
     <div class="post-body post-content">
-        <h2 id="Form-Data-vs-Request-Payload"><a href="#Form-Data-vs-Request-Payload" class="headerlink" title="Form Data vs Request Payload"></a><center>Form Data <i style="font-size: 14px;">vs</i> Request Payload</center></h2><p>前几天在与后端的调试中发现一个问题，因为触及到了知识盲区，特此记录。<br></p>
-<p>——————华——————丽———————的———————分———————割———————线—————<br></p>
+        <p>前几天在与后端的调试中发现一个问题，因为触及到了知识盲区，特此记录。<br></p>
+<p>—————华————丽—————的—————分—————割—————线————<br></p>
 <p>一次普通的api调用中，使用<code>post</code>发请求，发送的<code>params</code>后端一直说没收到参数，F12发现参数确确实实已经发送了。如图：<br></p>
-<p><img src="/./img/webs/formData.png" alt="FormData"><br><img src="/./img/cloud/IMG_20190608_191748.min.jpg" alt="初时"><br>使用swagger发送同样的参数请求后端却可以接收到参数：<br></p>
+<p><img src="/./img/webs/formData.png" alt="FormData"><br>使用swagger发送同样的参数请求后端却可以接收到参数：<br></p>
 <p><img src="/./img/webs/RequestPayload.png" alt="RequestPayload"></p>
 <p>通过比对发现，两者的不同在于一个参数类型是<code>Form Data</code>，一个是<code>Request Payload</code>。什么意思呢？<br></p>
 <p><strong>百度一下 你就知道</strong><br></p>
 <p> <code>Request Payload</code>更准确的说是http request的payload body。一般用在数据通过<code>POST</code>请求或者<code>PUT</code>请求。它是HTTP请求中<i>空行</i>的后面那部分。（PS:这里涉及一个http常被问到的问题，http请求由哪几部分组成，一般是请求行，请求头，<i>空行</i>，请求体。payload body应该是对应请求体。）</p>
 <p>一个请求伴随着<code>headers</code>设置为<code>Content-Type: application/json</code>时，参数看起来是这样的：<br></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">POST /some-path HTTP/1.1</span><br><span class="line"> Content-Type: application/json</span><br><span class="line"></span><br><span class="line">&#123; &quot;foo&quot; : &quot;bar&quot;, &quot;name&quot; : &quot;John&quot; &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">POST /some-path HTTP/<span class="number">1.1</span></span><br><span class="line"> Content-Type: application/json</span><br><span class="line"></span><br><span class="line">&#123; <span class="string">"foo"</span> : <span class="string">"bar"</span>, <span class="string">"name"</span> : <span class="string">"John"</span> &#125;</span><br></pre></td></tr></table></figure>
 <p>如果你只是正常的请求一个ajax请求，浏览器是会把你提交的<code>params</code>作为<code>Payload</code>展示出来，因为他也不知道<code>params</code>来自哪里。<br>但如果你提交的请求设置了<code>method=&quot;POST&quot;</code> 并且<code>headers</code>设置了<code>Content-Type: application/x-www-form-urlencoded</code>或者<code>Content-Type: multipart/form-data</code>，那么你的请求看起来就是下面这样的，类似GET请求里的参数拼接：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">POST /some-path HTTP/1.1</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line"></span><br><span class="line">foo=bar&amp;name=Jack</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">POST /some-path HTTP/<span class="number">1.1</span></span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line"></span><br><span class="line">foo=bar&amp;name=Jack</span><br></pre></td></tr></table></figure>
 <p>这里的<code>form data</code>就是<code>request payload</code>，在这里浏览器知道的更多：他知道<code>bar</code>是表单<code>foo</code>的值<code>Jack</code>是<code>name</code>的值，所以这里做了展示。<br><br>在回到之前的问题，通过观察图片发现，两者的区别确实是因为headers中Content Type的值设置不同导致的：<br><br><img src="/./img/webs/compare.png" alt="compare"></p>
 <p>通过查看request.js证实了这个验证：<br><br><img src="/./img/webs/http.png" alt="http"><br>解决办法：<br></p>
 <blockquote>
-<p>在请求中，设置一个header即可</p>
+<p>在请求中，设置一个headers即可</p>
 </blockquote>
 <p><img src="/./img/webs/api.png" alt="api"></p>
 <ul>
@@ -273,7 +273,7 @@ var Clock=(function(){var g,v,b=true,d,o=400,H={up:false,shift:false},E=[],f="hs
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Form-Data-vs-Request-Payload"><span class="toc-text">Form Data vs Request Payload</span></a></li></ol>
+            <p>暂无目录</p>
         
     </div>
 </aside>
