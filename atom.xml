@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://snow-sprite.github.io/"/>
-  <updated>2021-01-07T15:35:06.096Z</updated>
+  <updated>2020-12-12T14:30:09.290Z</updated>
   <id>https://snow-sprite.github.io/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>http-request.md</title>
-    <link href="https://snow-sprite.github.io/posts/2a03f45b.html"/>
-    <id>https://snow-sprite.github.io/posts/2a03f45b.html</id>
-    <published>2021-01-07T15:13:47.000Z</published>
-    <updated>2021-01-07T15:35:06.096Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Form-Data-vs-Request-Payload&quot;&gt;&lt;a href=&quot;#Form-Data-vs-Request-Payload&quot; class=&quot;headerlink&quot; title=&quot;Form Data vs Request
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>2020-12-12</title>
@@ -59,6 +37,30 @@
     
     
       <category term="己见" scheme="https://snow-sprite.github.io/tags/%E5%B7%B1%E8%A7%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>http-request.md</title>
+    <link href="https://snow-sprite.github.io/posts/2a03f45b.html"/>
+    <id>https://snow-sprite.github.io/posts/2a03f45b.html</id>
+    <published>2020-11-07T15:13:47.000Z</published>
+    <updated>2021-01-07T15:42:57.715Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Form-Data-vs-Request-Payload&quot;&gt;&lt;a href=&quot;#Form-Data-vs-Request-Payload&quot; class=&quot;headerlink&quot; title=&quot;Form Data vs Request
+        
+      
+    
+    </summary>
+    
+    
+      <category term="js" scheme="https://snow-sprite.github.io/tags/js/"/>
     
   </entry>
   
