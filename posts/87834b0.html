@@ -163,7 +163,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2019/08/18</span>
+            <span class="date-meta">2019/10/19</span>
         </span>
         
             <span class="fa-wrap">
@@ -177,27 +177,27 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>587</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>525</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
     
     <div class="post-body post-content">
-        <h3 id="vue2项目编译webpack耗时统计"><a href="#vue2项目编译webpack耗时统计" class="headerlink" title="vue2项目编译webpack耗时统计"></a>vue2项目编译webpack耗时统计</h3><h4 id="1-手动统计耗时"><a href="#1-手动统计耗时" class="headerlink" title="1. 手动统计耗时"></a>1. 手动统计耗时</h4><p>   vue编译命令<code>npm run build</code>，其实际使用的命令是<code>vue-cli-service build</code>，路径是<code>node_modules\@vue\cli-service\lib\commands\build\index.js</code></p>
+        <h3 id="vue2-项目编译-webpack-耗时统计"><a href="#vue2-项目编译-webpack-耗时统计" class="headerlink" title="vue2 项目编译 webpack 耗时统计"></a>vue2 项目编译 webpack 耗时统计</h3><h4 id="1-手动统计耗时"><a href="#1-手动统计耗时" class="headerlink" title="1. 手动统计耗时"></a>1. 手动统计耗时</h4><p>vue 编译命令<code>npm run build</code>，其实际使用的命令是<code>vue-cli-service build</code>，路径是<code>node_modules\@vue\cli-service\lib\commands\build\index.js</code></p>
 <ul>
-<li><p>原108行加入命令：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> beginTime = <span class="built_in">Date</span>.now()</span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/13472962-cb4be2be74afedf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1108210880-6059d07a89aae_fix732.png"></p>
-</li>
-<li><p>原209~210行之间加入代码：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> endTime = <span class="built_in">Date</span>.now()</span><br><span class="line">info(<span class="string">`编译耗时：<span class="subst">$&#123;chalk.cyan((endTime - beginTime) <span class="regexp">/ 1000)&#125;(s)`)</span></span></span></span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/13472962-7e87c774e669f0bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="443848835-6059d0887c004_fix732.png"></p>
+<li>原 108 行加入命令：</li>
+</ul>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> beginTime = <span class="built_in">Date</span>.now()</span><br></pre></td></tr></table></figure>
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/13472962-cb4be2be74afedf7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="1108210880-6059d07a89aae_fix732.png"></p>
+<ul>
+<li>原 209~210 行之间加入代码：</li>
+</ul>
+<pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> endTime = <span class="built_in">Date</span>.now()</span><br><span class="line">info(<span class="string">`编译耗时：<span class="subst">$&#123;chalk.cyan((endTime - beginTime) <span class="regexp">/ 1000)&#125;(s)`)</span></span></span></span><br></pre></td></tr></table></figure>
+</code></pre><p><img src="https://upload-images.jianshu.io/upload_images/13472962-7e87c774e669f0bc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="443848835-6059d0887c004_fix732.png"></p>
 <ul>
 <li><code>npm run build</code>即可看出编译总耗时<br><img src="https://upload-images.jianshu.io/upload_images/13472962-f0869b0a75cc6c48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="3327643274-6059d0953d0a4_fix732.png"></li>
 </ul>
-</li>
-</ul>
-<h4 id="2-使用第三方工具（推荐）"><a href="#2-使用第三方工具（推荐）" class="headerlink" title="2. 使用第三方工具（推荐）"></a>2. 使用第三方工具（推荐）</h4><p>  <a href="https://www.npmjs.com/package/speed-measure-webpack-plugin" target="_blank" rel="noopener">speed-measure-webpack-plugin</a>每一项耗时都有精确统计，搭配使用<a href="https://www.npmjs.com/package/webpack-bundle-analyzer" target="_blank" rel="noopener">webpack-bundle-analyzer</a>打包后的各个模块文件大小，直观明了，根据具体项目再去进行优化。</p>
+<h4 id="2-使用第三方工具（推荐）"><a href="#2-使用第三方工具（推荐）" class="headerlink" title="2. 使用第三方工具（推荐）"></a>2. 使用第三方工具（推荐）</h4><p><a href="https://www.npmjs.com/package/speed-measure-webpack-plugin" target="_blank" rel="noopener">speed-measure-webpack-plugin</a>每一项耗时都有精确统计，搭配使用<a href="https://www.npmjs.com/package/webpack-bundle-analyzer" target="_blank" rel="noopener">webpack-bundle-analyzer</a>打包后的各个模块文件大小，直观明了，根据具体项目再去进行优化。</p>
 
     </div>
     
@@ -221,9 +221,9 @@
         </a>
     
     
-        <a href="/posts/d7cc1872.html" class="next-post btn btn-default" title="暂存的代码被误删除后的恢复办法.md">
+        <a href="/posts/3845cc65.html" class="next-post btn btn-default" title="js统计页面加载完成需要的时间.md">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">暂存的代码被误删除后的恢复办法.md</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">js统计页面加载完成需要的时间.md</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -276,7 +276,7 @@ var Clock=(function(){var g,v,b=true,d,o=400,H={up:false,shift:false},E=[],f="hs
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vue2项目编译webpack耗时统计"><span class="toc-text">vue2项目编译webpack耗时统计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-手动统计耗时"><span class="toc-text">1. 手动统计耗时</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-使用第三方工具（推荐）"><span class="toc-text">2. 使用第三方工具（推荐）</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#vue2-项目编译-webpack-耗时统计"><span class="toc-text">vue2 项目编译 webpack 耗时统计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-手动统计耗时"><span class="toc-text">1. 手动统计耗时</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-使用第三方工具（推荐）"><span class="toc-text">2. 使用第三方工具（推荐）</span></a></li></ol></li></ol>
         
     </div>
 </aside>
